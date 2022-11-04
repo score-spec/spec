@@ -16,12 +16,13 @@ metadata:
   name: string
 ```
 
-`apiversion`: the declared Score Specification version.
+`apiVersion`: the declared Score Specification version.
 
 - Valid options: `score.dev/v1b1`
 
 `metadata`: an optional metadata description of your Workload.
 
+- `name`: specifies a name.
 ### Workload example
 
 The following is a top-level description for a Workload.
