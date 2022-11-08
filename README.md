@@ -23,6 +23,7 @@ Use the Platform command line tool to generate your platform specific Workloads.
 To install the Platform command-line tools, see the installation guide in each repository.
 
 - [score-compose](https://github.com/score-spec/score-compose#-installation)
+- [score-helm](https://github.com/score-spec/score-helm#-installation)
 - [score-humanitec](https://github.com/score-spec/score-humanitec#-installation)
 
 ## ![Get involved](/docs/images/get-involved.svg) Get involved
