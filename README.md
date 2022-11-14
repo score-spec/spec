@@ -72,7 +72,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ### Documentation
 
-You kind find our documentation at [docs.score.dev](https://docs.score.dev/docs/).
+You can find our documentation at [docs.score.dev](https://docs.score.dev/docs/).
 
 ### Roadmap
 
