@@ -8,7 +8,7 @@ In the example below, a `score.yaml` file is executed via [score-compose](https:
 
 ![demo.gif](/docs/images/demo.gif)
 
-The aim of this project is to reduce toil and cognitive load of developers by only having to define a single yaml that works across multiple platforms. Score does not intend to be a fully featured yaml replacement for those platforms, it only aims to define workloads that can be combined with more advanced yaml configurations that an infrastructure team would provide to developers in an organization. This has the following advantages:
+The aim of this project is to reduce toil and cognitive load of developers by only having to define a single yaml file that works across multiple platforms. Score does not intend to be a fully featured yaml replacement for those platforms, it only aims to define workloads that can be combined with more advanced yaml configurations that an infrastructure team would provide to developers in an organization. This has the following advantages:
 
 - The developer only needs to learn the _Score Specification_ to define the workloads that run across all these platforms.
 - The _Score Specification_ is designed to be applied to multiple environments to reduce the amount of configuration.
