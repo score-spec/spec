@@ -21,11 +21,11 @@ At this time Score is still in alpha, but we are hoping for it to quickly grow i
 Cloud-native developers often struggle with configuration inconsistencies between environments. This gets even more complicated when the technology stack in each environment is different. What if you use Docker Compose for local development, but Helm Charts to deploy to the Kubernetes based development environment? Not only do you have to figure out Docker Compose and Helm, but you need to keep them in sync!
 This results in various bottlenecks along the application delivery lifecycle.
 
-    🎵 Tech & tools that require specialized knowledge and operational expertise are imposed on developers.
+  🎵 Tech & tools that require specialized knowledge and operational expertise are imposed on developers.
 
-    🎵 Different configuration rules, constructs and values between local and remote environments increase the risk of configuration inconsistencies.
+  🎵 Different configuration rules, constructs and values between local and remote environments increase the risk of configuration inconsistencies.
 
-    🎵 Keeping a multitude of platform- and environment-specific configuration files in sync leads to repetitive configuration work.
+  🎵 Keeping a multitude of platform- and environment-specific configuration files in sync leads to repetitive configuration work.
 
 Score provides a single, easy to understand specification for each workload that describes its runtime requirements in a declarative manner. The `score.yaml` file allows to generate configuration in an automated, standardized and one directional way. By reducing the risk of wrongly specified or inconsistent configuration between environments are we hoping to foster focus and joy for developers in their day-to-day work.
 
@@ -52,7 +52,7 @@ To install a _Score Implementation_, see the installation guide in each reposito
   - team@score.dev
   - abuse@score.dev
 - Join us on [Slack](https://join.slack.com/t/scorecommunity/shared_invite/zt-1i2glkqkl-EnjSWSCgYUyaEGwmDYBZZQ)
-- See our [documentation](https://docs.score.dev/docs/overview/).
+- See our [documentation](https://docs.score.dev/docs/overview/)
 
 ## ![Contributing](/docs/images/contributing.svg) Contributing
 
