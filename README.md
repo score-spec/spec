@@ -10,9 +10,9 @@ In the example below, a `score.yaml` file is executed via [score-compose](https:
 
 The aim of this project is to reduce toil and cognitive load of developers by only having to define a single yaml that works across multiple platforms. Score does not intend to be a fully featured yaml replacement for those platforms, it only aims to define workloads that can be combined with more advanced yaml configurations that an infrastructure team would provide to developers in an organization. This has the following advantages:
 
+- The developer only needs to learn the _Score Specification_ to define the workloads that run across all these platforms.
+- The _Score Specification_ is designed to be applied to multiple environments to reduce the amount of configuration.
 - An infrastructure team can help define and configure the resources and multiple platforms where the developer can work on.
-- The developer only needs to learn the score spec to define the workloads that run across all these platforms.
-- The score spec is designed to be applied to multiple environments to reduce the amount of configuration.
 
 At this time Score is still in alpha, but we are hoping for it to quickly grow its implementation use cases through community contributions.
 
