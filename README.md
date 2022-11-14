@@ -29,7 +29,7 @@ To install the Platform command-line tools, see the installation guide in each r
 ## ![Get involved](/docs/images/get-involved.svg) Get involved
 
 - Give the project a star!
-- Contact us via Email:
+- Contact us via email:
   - team@score.dev
   - abuse@score.dev
 - Join us on [Slack](https://join.slack.com/t/scorecommunity/shared_invite/zt-1i2glkqkl-EnjSWSCgYUyaEGwmDYBZZQ)
@@ -37,7 +37,7 @@ To install the Platform command-line tools, see the installation guide in each r
 
 ## ![Contributing](/docs/images/contributing.svg) Contributing
 
-<!-- - Write a [blog](score.dev/blog). -->
+- Write a [blog](https://score.dev/blog).
 - Provide feedback on our [road map and releases board](https://github.com/orgs/score-spec/projects).
 - Contribute.
 
