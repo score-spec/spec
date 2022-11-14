@@ -2,9 +2,13 @@
 
 ## ![Score](/docs/images/logo.svg) What is Score?
 
-Score is an open source, platform-agnostic, container-based workload specification. This means you can define your workload once with the _Score Specification_ and then use a _Score Implementation_ CLI to translate it to multiple platforms, such as Helm, Docker Compose or Google Cloud Run. The aim of this project is to reduce toil and cognitive load of developers by only having to define a single yaml that works across multiple platforms.
+Score is an open source, platform-agnostic, container-based workload specification. This means you can define your workload once with the _Score Specification_ and then use a _Score Implementation_ CLI to translate it to multiple platforms, such as Helm, Docker Compose or Google Cloud Run.
 
-Score does not intend to be a fully featured yaml replacement for those platforms, it only aims to define workloads that can be combined with more advanced yaml configurations that an infrastructure team would provide to developers in an organization. This has the following advantages:
+In the example below, a `score.yaml` file is executed via [score-compose](https://github.com/score-spec/score-compose/tree/main/examples) to generate a `compose.yaml` file, which allows to spins up a container via Docker Compose. The same `score.yaml` file is then used to generate a helm `values.yaml` file to be installed onto Kubernetes.
+
+![demo.gif](/docs/images/demo.gif)
+
+The aim of this project is to reduce toil and cognitive load of developers by only having to define a single yaml that works across multiple platforms. Score does not intend to be a fully featured yaml replacement for those platforms, it only aims to define workloads that can be combined with more advanced yaml configurations that an infrastructure team would provide to developers in an organization. This has the following advantages:
 
 - An infrastructure team can help define and configure the resources and multiple platforms where the developer can work on.
 - The developer only needs to learn the score spec to define the workloads that run across all these platforms.
@@ -17,11 +21,11 @@ At this time Score is still in alpha, but we are hoping for it to quickly grow i
 Cloud-native developers often struggle with configuration inconsistencies between environments. This gets even more complicated when the technology stack in each environment is different. What if you use Docker Compose for local development, but Helm Charts to deploy to the Kubernetes based development environment? Not only do you have to figure out Docker Compose and Helm, but you need to keep them in sync!
 This results in various bottlenecks along the application delivery lifecycle.
 
-  🎵 Tech & tools that require specialized knowledge and operational expertise are imposed on developers.
+    🎵 Tech & tools that require specialized knowledge and operational expertise are imposed on developers.
 
-  🎵 Different configuration rules, constructs and values between local and remote environments increase the risk of configuration inconsistencies.
+    🎵 Different configuration rules, constructs and values between local and remote environments increase the risk of configuration inconsistencies.
 
-  🎵 Keeping a multitude of platform- and environment-specific configuration files in sync leads to repetitive configuration work.
+    🎵 Keeping a multitude of platform- and environment-specific configuration files in sync leads to repetitive configuration work.
 
 Score provides a single, easy to understand specification for each workload that describes its runtime requirements in a declarative manner. The `score.yaml` file allows to generate configuration in an automated, standardized and one directional way. By reducing the risk of wrongly specified or inconsistent configuration between environments are we hoping to foster focus and joy for developers in their day-to-day work.
 
@@ -31,11 +35,7 @@ Score provides a single, easy to understand specification for each workload that
 
 As shown in the graphic above, are there 3 core components to consider in the context of Score:
 
-The _Score Specification_ file is a platform-agnostic workload specification which can be run against a _Score Implementation_ (CLI)such as [score-compose](https://github.com/score-spec/score-compose) or [score-helm](https://github.com/score-spec/score-helm) to generate a platform configuration file such as `docker-compose.yaml` or a helm `values.yaml` file. The generated configuration file can then be combined with environment-specific parameters to run the workload in the target environment.
-
-In the example below, a `score.yaml` file is executed via [score-compose](https://github.com/score-spec/score-compose/tree/main/examples) to generate a `compose.yaml` file, which allows to spins up a container via Docker Compose. The same `score.yaml` file is then used to generate a helm `values.yaml` file to be installed onto Kubernetes.
-
-![demo.gif](/docs/images/demo.gif)
+The _Score Specification_ file is a platform-agnostic workload specification which can be run against a _Score Implementation_ (CLI) such as [score-compose](https://github.com/score-spec/score-compose) or [score-helm](https://github.com/score-spec/score-helm) to generate a platform configuration file such as `docker-compose.yaml` or a helm `values.yaml` file. The generated configuration file can then be combined with environment-specific parameters to run the workload in the target environment.
 
 ## ![Installation](/docs/images/install.svg) Installation
 
