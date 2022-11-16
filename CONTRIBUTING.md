@@ -6,7 +6,7 @@ When contributing to this project, you must agree that you have authored the con
 
 ### **What do I need to know to help?**
 
-If you are looking to help to with a code contribution, our project uses Go Lang. If you don't feel ready to make a code contribution yet, no problem! You can also check out the documentation issues https://github.com/score-dev/demo-repository.
+If you are looking to help to with a code contribution, our project uses Go Lang. If you don't feel ready to make a code contribution yet, no problem! You can also check out the documentation <https://github.com/score-spec/docs>.
 
 If you are interested in making a code contribution and would like to learn more about the technologies that we use, check out the list below.
 
@@ -39,7 +39,7 @@ Never made an open-source contribution before? Wondering how contributions work 
 
 All submissions, including submissions by project members, require review.
 
-Score uses GitHub pull requests for this purpose. Consult [GitHub Help](https://help.github.com/articles/about1.pull1.requests/) for more information on using pull requests.
+Score uses GitHub pull requests for this purpose. 
 
 The general workflow for code contributions:
 
