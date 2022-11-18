@@ -4,7 +4,7 @@
 
 Score is an open source, platform-agnostic, container-based workload specification. This means you can define your workload once with the _Score Specification_ and then use a _Score Implementation_ CLI to translate it to multiple platforms, such as Helm, Docker Compose or Google Cloud Run.
 
-In the example below, a `score.yaml` file is executed via [score-compose](https://github.com/score-spec/score-compose/tree/main/examples) to generate a `compose.yaml` file, which allows to spins up a container via Docker Compose. The same `score.yaml` file is then used to generate a helm `values.yaml` file to be installed onto Kubernetes.
+In the example below, a `score.yaml` file is executed via [score-compose](https://github.com/score-spec/score-compose/tree/main/examples) to generate a `compose.yaml` file, which allows the user to spin up a container via Docker Compose. The same `score.yaml` file is then used to generate a helm `values.yaml` file to be installed onto Kubernetes.
 
 ![demo.gif](/docs/images/demo.gif)
 
