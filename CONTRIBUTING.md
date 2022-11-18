@@ -54,7 +54,7 @@ The general workflow for code contributions:
 
 ### **Where can I go for help?**
 
-If you need help, you can create an issue.
+If you need help, you can create an [issue](https://github.com/score-spec/spec/issues/new).
 
 ### Reporting bugs
 
