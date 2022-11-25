@@ -1,3 +1,5 @@
+# Score
+
 ![Score banner](/docs/images/banner.png)
 
 ## ![Score](/docs/images/logo.svg) What is Score?
