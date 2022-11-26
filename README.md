@@ -78,6 +78,10 @@ You can find our documentation at [docs.score.dev](https://docs.score.dev/docs/)
 
 See [Roadmap](roadmap.md). You can [submit an idea](https://github.com/score-spec/spec/issues/new) anytime.
 
+### Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=score-spec/spec&type=Date)](https://star-history.com/#score-spec/spec&Date)
+
 ### License
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
