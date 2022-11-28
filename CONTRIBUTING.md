@@ -1,20 +1,21 @@
 # Contributor guidelines
 
-We'd love to accept your patches and contributions to this project. There are just a few small guidelines you need to follow.
+We'd love to accept your patches and contributions to this project. There are just a few guidelines to follow.
 
 When contributing to this project, you must agree that you have authored the content, that you have the necessary rights to the content and that the content you contribute may be provided under the [APACHE LICENSE, VERSION 2.0](LICENSE).
 
-### **What do I need to know to help?**
+### What do I need to know to help?
 
 If you are looking to help to with a code contribution, our project uses Go Lang. If you don't feel ready to make a code contribution yet, no problem! You can also check out the documentation <https://github.com/score-spec/docs>.
 
 If you are interested in making a code contribution and would like to learn more about the technologies that we use, check out the list below.
 
-- [https://humanitec.com](https://humanitec.com/)
-- [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
-- [https://helm.sh/docs/](https://helm.sh/docs/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [GoLang](https://go.dev)
+- [Helm](https://helm.sh/docs/)
+- [Humanitec](https://docs.humanitec.com/introduction/readme)
 
-### **How do I make a contribution?**
+### How do I make a contribution?
 
 Never made an open-source contribution before? Wondering how contributions work in our project? Here's a quick rundown!
 
@@ -31,7 +32,8 @@ Never made an open-source contribution before? Wondering how contributions work 
 11. In the description of the pull request, explain the changes that you made, any issues you think exist with the pull request you made, and any questions you have for the maintainer. It's OK if your pull request is not perfect (no pull request is), the reviewer will be able to help you resolve any problems and improve it!
 12. Wait for the pull request to be reviewed by a maintainer.
 13. Introduce changes to the pull request if the reviewing maintainer recommends them.
-14. Celebrate your success after your pull request is merged!
+14. Merge your pull request once approved.
+15. Celebrate your success after your pull request is merged!
 
 ## Feature requests
 
@@ -39,7 +41,7 @@ Never made an open-source contribution before? Wondering how contributions work 
 
 All submissions, including submissions by project members, require review.
 
-Score uses GitHub pull requests for this purpose. 
+Score uses GitHub pull requests for this purpose.
 
 The general workflow for code contributions:
 
@@ -52,7 +54,7 @@ The general workflow for code contributions:
 1. Iterate as needed.
 1. Your PR will be approved and merged.
 
-### **Where can I go for help?**
+### Where can I go for help?
 
 If you need help, you can create an [issue](https://github.com/score-spec/spec/issues/new).
 
@@ -63,7 +65,7 @@ If you need help, you can create an [issue](https://github.com/score-spec/spec/i
 A good bug report shouldn't leave others needing to chase you up for more information. Therefore, we ask you to investigate carefully, collect information and describe the issue in detail in your report. Please complete the following steps in advance to help us fix any potential bug as fast as possible.
 
 - Make sure that you are using the latest version.
-- Determine if your bug is really a bug and not an error on your side for example using incompatible environment components/versions (Make sure that you have read the [documentation](https://github.com/score-dev/docs). If you are looking for support.
+- Determine if your bug is really a bug and not an error on your side for example using incompatible environment components/versions (Make sure that you have read the [documentation](https://github.com/score-spec/docs). If you are looking for support.
 - To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug.
 - Also make sure to search the internet (including Stack Overflow) to see if users outside the GitHub community have discussed the issue.
 - Collect information about the bug:
@@ -73,7 +75,7 @@ A good bug report shouldn't leave others needing to chase you up for more inform
   - Possibly your input and the output.
   - Can you reliably reproduce the issue?
 
-### **What does the Code of Conduct mean for me?**
+### What does the Code of Conduct mean for me?
 
 Our [Code of Conduct](CODE_OF_CONDUCT.md) means that you are responsible for treating everyone on the project with respect and courtesy, regardless of their identity. If you are the victim of any inappropriate behavior or comments as described in our Code of Conduct, we are here for you and will do the best to ensure that the abuser is reprimanded appropriately, per our code.
 
