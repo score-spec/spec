@@ -45,6 +45,8 @@ To install a _Score Implementation_, see the installation guide in each reposito
 - [score-helm](https://github.com/score-spec/score-helm#-installation)
 - [score-humanitec](https://github.com/score-spec/score-humanitec#-installation)
 
+Can't find the implementation you are looking for? The Score Specification has the potential to integrate with many container orchestration platforms and tooling such as Kustomize, Amazon ECS, Google Cloud Run, or Nomad. Help up shape the next generation of Score implementation CLI’s and start contributing [here](https://github.com/score-spec/spec/blob/main/roadmap.md#get-involved).
+
 ## ![Get involved](/docs/images/get-involved.svg) Get involved
 
 - Give the project a star!
@@ -56,8 +58,8 @@ To install a _Score Implementation_, see the installation guide in each reposito
 
 ## ![Contributing](/docs/images/contributing.svg) Contributing
 
-<!-- - Write a [blog](score.dev/blog). -->
-- Provide feedback on our [road map and releases board](https://github.com/orgs/score-spec/projects).
+- Write a [blog post](score.dev/blog).
+- Provide feedback on our [road map and releases board](https://github.com/score-spec/spec/blob/main/roadmap.md#get-involved).
 - Contribute.
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.

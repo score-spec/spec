@@ -12,4 +12,7 @@ As a platform-agnostic Workload specification, the Score Spec integrates with ma
 
 The developer documentation [docs.score.dev](https://docs.score.dev/docs/) plays a crucial role in onboarding new users to Score and supporting them in their day-to-day usage. To be helpful for users of all experiences and for a variety of use cases, additional documentation in the form of real-world usage examples, tutorials, demos, and educational material on underlying concepts such as containers, container orchestration platforms, CLI tooling and similar is needed. With this, a smooth onboarding experience that defines clear learning paths forward can be provided for Score's users.
 
-For reference and status updates on the roadmap, please check the [roadmap project](https://github.com/orgs/score-spec/projects/1). You can submit an idea anytime [here](https://github.com/score-spec/spec/issues/new).
+For reference and status updates on the roadmap, please check the [roadmap project](https://github.com/orgs/score-spec/projects/1).
+
+# Get involved
+You can start a discussion or submit an idea [here](https://github.com/score-spec/spec/issues/new) anytime.
