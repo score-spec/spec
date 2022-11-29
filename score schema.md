@@ -23,6 +23,7 @@ metadata:
 `metadata`: an optional metadata description of your Workload.
 
 - `name`: specifies a name.
+
 ### Workload example
 
 The following is a top-level description for a Workload.
