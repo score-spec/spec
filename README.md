@@ -56,7 +56,8 @@ To install a _Score Implementation_, see the installation guide in each reposito
 - [score-compose](https://github.com/score-spec/score-compose#-installation)
 - [score-helm](https://github.com/score-spec/score-helm#-installation)
 - [score-humanitec](https://github.com/score-spec/score-humanitec#-installation)
-- For linux based systems, run this script on your CLI
+- For linux based systems, run this script on your CLI: 
+<br/>
   "$ curl -L https://github.com/score-org/score-cli/releases/download/v1.0.0/score-cli_1.0.0_linux_amd64.tar.gz | tar -xz -C /usr/local/bin/" 
 
 Can't find the implementation you are looking for? The Score Specification has the potential to integrate with many container orchestration platforms and tooling such as Kustomize, Amazon ECS, Google Cloud Run, or Nomad. Help up shape the next generation of Score implementation CLI’s and start contributing [here](https://github.com/score-spec/spec/blob/main/roadmap.md#get-involved).
