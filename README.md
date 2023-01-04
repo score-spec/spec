@@ -44,7 +44,7 @@ By reducing the risk of wrongly specified or inconsistent configuration between 
 
 ![how-score-works](/docs/images/how-score-works.png)
 
-As shown in the graphic above, are there 3 core components to consider in the context of Score:
+As shown in the graphic above, there are 3 core components to consider in the context of Score:
 
 The _Score Specification_ file is a platform-agnostic workload specification which can be run against a _Score Implementation_ (CLI) such as [score-compose](https://github.com/score-spec/score-compose) or [score-helm](https://github.com/score-spec/score-helm) to generate a platform configuration file such as `docker-compose.yaml` or a helm `values.yaml` file.
 The generated configuration file can then be combined with environment-specific parameters to run the workload in the target environment.
