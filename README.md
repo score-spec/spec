@@ -34,7 +34,7 @@ This results in various bottlenecks along the application delivery lifecycle.
 
 🎵 Different configuration rules, constructs and values between local and remote environments increase the risk of configuration inconsistencies.
 
-🎵 Keeping a multitude of platforms - and environment-specific configuration files in sync leads to repetitive configuration work.
+🎵 Keeping a multitude of platforms and environment-specific configuration files in sync leads to repetitive configuration work.
 
 Score provides a single, easy to understand specification for each workload that describes its runtime requirements in a declarative manner. The `score.yaml` file allows generating configuration in an automated, standardized and one directional way.
 

@@ -10,4 +10,4 @@ Technically, Score can be utilized by any team running containerized application
 - Does making a configuration change feel like a tedious and error-prone procedure?
 - Are you often blocked and rely on other (ops) engineers to help you out?
 
-From our experience, bottlenecks typically arise in medium-sized and larger development teams working in a continuously growing production landscape that runs on an orchestrator such as Kubernetes, while dealing with legacy systems, newly introduced tooling, knowledge silos or similar.
+From our experience, this is often the case in medium-sized and larger development teams that work in a continuously growing production landscape. For example, bottlenecks and knowledge silos can arise when teams deal with the adoption of new tech and tools while maintaining legacy systems.
