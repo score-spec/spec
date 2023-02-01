@@ -19,4 +19,5 @@ With this, a smooth onboarding experience that defines clear learning paths forw
 For reference and status updates on the roadmap, please check the [roadmap project](https://github.com/orgs/score-spec/projects/1).
 
 # Get involved
+
 You can start a discussion or submit an idea [here](https://github.com/score-spec/spec/issues/new) anytime.

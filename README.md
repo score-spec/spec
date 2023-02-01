@@ -12,7 +12,7 @@ In the example below, a `score.yaml` file is executed via [score-compose](https:
 
 This project aims to reduce developer toil and cognitive load by only having to define a single yaml file that works across multiple platforms.
 
-Score helps to improve the developer experience by being combined with other workflows and is not meant to replace yaml. Infrastructure and development teams can use this specification to improve workflows throughout their organization.
+Score helps to improve the developer experience by being combined with other workflows, and is not meant to replace yaml. Infrastructure and development teams can use this specification to improve workflows throughout their organization.
 
 Using Score provides the following advantages:
 
@@ -20,25 +20,25 @@ Using Score provides the following advantages:
 - The _Score Specification_ is designed to be applied to multiple environments to reduce the amount of configuration.
 - An infrastructure team can help define and configure the resources and multiple platforms where the developer can work on.
 
-At this time Score is still in alpha, but we are hoping for it to quickly grow its implementation use cases through community contributions.
+At this time, Score is still in alpha, but we are hoping for it to quickly grow its implementation use cases through community contributions.
 
 ## ![Score](/docs/images/logo.svg) Why Score?
 
-Cloud native developers often struggle with configuration inconsistencies between environments. This gets even more complicated when the technology stack in each environment is different. What if you use Docker Compose for local development, but Helm Charts to deploy to the Kubernetes based development environment?
+Cloud native developers often struggle with configuration inconsistencies between environments. This gets even more complicated when the technology stack in each environment is different. What if you use Docker Compose for local development, but Helm Charts to deploy to the Kubernetes-based development environment?
 
 Not only do you have to figure out Docker Compose and Helm, but you need to keep them in sync!
 
 This results in various bottlenecks along the application delivery lifecycle.
 
-  🎵 Tech & tools that require specialized knowledge and operational expertise are imposed on developers.
+🎵 Tech & tools that require specialized knowledge and operational expertise are imposed on developers.
 
-  🎵 Different configuration rules, constructs and values between local and remote environments increase the risk of configuration inconsistencies.
+🎵 Different configuration rules, constructs and values between local and remote environments increase the risk of configuration inconsistencies.
 
-  🎵 Keeping a multitude of platform- and environment-specific configuration files in sync leads to repetitive configuration work.
+🎵 Keeping a multitude of platforms and environment-specific configuration files in sync leads to repetitive configuration work.
 
-Score provides a single, easy to understand specification for each workload that describes its runtime requirements in a declarative manner. The `score.yaml` file allows to generate configuration in an automated, standardized and one directional way.
+Score provides a single, easy to understand specification for each workload that describes its runtime requirements in a declarative manner. The `score.yaml` file allows generating configuration in an automated, standardized and one directional way.
 
-By reducing the risk of wrongly specified or inconsistent configuration between environments are we hoping to foster focus and joy for developers in their day-to-day work.
+By reducing the risk of wrongly specified or inconsistent configuration between environments, are we hoping to foster focus and joy for developers in their day-to-day work.
 
 ## ![Score](/docs/images/logo.svg) How does Score work?
 
@@ -73,7 +73,7 @@ Can't find the implementation you are looking for? The Score Specification has t
 - Provide feedback on our [road map and releases board](https://github.com/score-spec/spec/blob/main/roadmap.md#get-involved).
 - Contribute.
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also open an issue with the tag `enhancement`.
 
