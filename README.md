@@ -10,23 +10,21 @@ In the example below, a `score.yaml` file is executed via [score-compose](https:
 
 ![demo.gif](/docs/images/demo.gif)
 
-This project aims to reduce developer toil and cognitive load by only having to define a single yaml file that works across multiple platforms.
-
-Score helps to improve the developer experience by being combined with other workflows, and is not meant to replace yaml. Infrastructure and development teams can use this specification to improve workflows throughout their organization.
+This project aims to reduce developer toil and cognitive load by only having to define a single specification file that works across multiple platforms.
 
 Using Score provides the following advantages:
 
-- The developer only needs to learn the _Score Specification_ to define the workloads that run across all these platforms.
-- The _Score Specification_ is designed to be applied to multiple environments to reduce the amount of configuration.
-- An infrastructure team can help define and configure the resources and multiple platforms where the developer can work on.
+- *Creates a single source of truth for your workload's configuration*: Developers define their workload once with the _Score Specification_, independently of the environments it will run in.
 
-At this time, Score is still in alpha, but we are hoping for it to quickly grow its implementation use cases through community contributions.
+- *Reduces cognitive load*: The _Score Specification_ is tightly scoped and shields developers from the configurational complexity of container orchestrators and tooling. By exposing only core workload constructs, developers can keep their focus.
+
+- *Seperates concerns between dev and ops*: The _Score Specification_ clearly defines the responsibility of the developer. For the operations team it presents a recipe on how a workload should be run, providing clear instructions for the platform on the receiving end.
 
 ## ![Score](/docs/images/logo.svg) Why Score?
 
 Cloud native developers often struggle with configuration inconsistencies between environments. This gets even more complicated when the technology stack in each environment is different. What if you use Docker Compose for local development, but Helm Charts to deploy to the Kubernetes-based development environment?
 
-Not only do you have to figure out Docker Compose and Helm, but you need to keep them in sync!
+Not only do you have to figure out Docker Compose and Helm, but you need to keep them in sync.
 
 This results in various bottlenecks along the application delivery lifecycle.
 
@@ -51,7 +49,7 @@ The generated configuration file can then be combined with environment-specific 
 
 ## ![Installation](/docs/images/install.svg) Installation
 
-To install a _Score Implementation_, see the installation guide in each repository:
+To install one of our reference _Score Implementations_, see the installation guide in each repository:
 
 - [score-compose](https://github.com/score-spec/score-compose#-installation)
 - [score-helm](https://github.com/score-spec/score-helm#-installation)
@@ -70,7 +68,7 @@ Can't find the implementation you are looking for? The Score Specification has t
 ## ![Contributing](/docs/images/contributing.svg) Contributing
 
 - Write a [blog post](https://score.dev/blog).
-- Provide feedback on our [road map and releases board](https://github.com/score-spec/spec/blob/main/roadmap.md#get-involved).
+- Provide feedback on our [roadmap](https://github.com/score-spec/spec/blob/main/roadmap.md#get-involved).
 - Contribute.
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
@@ -97,4 +95,4 @@ See [Roadmap](roadmap.md). You can [submit an idea](https://github.com/score-spe
 
 ### Code of conduct
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
