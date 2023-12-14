@@ -14,11 +14,11 @@ This project aims to reduce developer toil and cognitive load by only having to 
 
 Using Score provides the following advantages:
 
-- *Creates a single source of truth for your workload's configuration*: Developers define their workload once with the _Score Specification_, independently of the environments it will run in.
+- **Creates a single source of truth for your workload's configuration**: Developers define their workload once with the _Score Specification_, independently of the environments it will run in.
 
-- *Reduces cognitive load*: The _Score Specification_ is tightly scoped and shields developers from the configurational complexity of container orchestrators and tooling. By exposing only core workload constructs, developers can keep their focus.
+- **Reduces cognitive load**: The _Score Specification_ is tightly scoped and shields developers from the configurational complexity of container orchestrators and tooling. By exposing only core workload constructs, developers can keep their focus.
 
-- *Seperates concerns between dev and ops*: The _Score Specification_ clearly defines the responsibility of the developer. For the operations team it presents a recipe on how a workload should be run, providing clear instructions for the platform on the receiving end.
+- **Seperates concerns between dev and ops**: The _Score Specification_ clearly defines the responsibility of the developer. For the operations team it presents a recipe on how a workload should be run, providing clear instructions for the platform on the receiving end.
 
 ## ![Score](/docs/images/logo.svg) Why Score?
 
@@ -54,7 +54,7 @@ To install one of our reference _Score Implementations_, see the installation gu
 - [score-compose](https://github.com/score-spec/score-compose#-installation)
 - [score-helm](https://github.com/score-spec/score-helm#-installation)
 
-Can't find the implementation you are looking for? The Score Specification has the potential to integrate with many container orchestration platforms and tooling such as Kustomize, Amazon ECS, Google Cloud Run, or Nomad. Help up shape the next generation of Score implementation CLI’s and start contributing [here](https://github.com/score-spec/spec/blob/main/roadmap.md#get-involved).
+Can't find the implementation you are looking for? The _Score Specification_ has the potential to integrate with many container orchestration platforms and tooling such as Kustomize, Amazon ECS, Google Cloud Run, or Nomad. Help up shape the next generation of Score implementation CLI’s and start contributing [here](https://github.com/score-spec/spec/blob/main/roadmap.md#get-involved).
 
 ## ![Get involved](/docs/images/get-involved.svg) Get involved
 
