@@ -62,7 +62,7 @@ Can't find the implementation you are looking for? The _Score Specification_ has
 - Contact us via email:
   - team@score.dev
   - abuse@score.dev
-- Join us on [Slack](https://join.slack.com/t/scorecommunity/shared_invite/zt-1i2glkqkl-EnjSWSCgYUyaEGwmDYBZZQ)
+- Join us on [Slack](https://join.slack.com/t/scorecommunity/shared_invite/zt-2a0x563j7-i1vZOK2Yg2o4TwCM1irIuA)
 - See our [documentation](https://docs.score.dev/docs/overview/)
 
 ## ![Contributing](/docs/images/contributing.svg) Contributing
