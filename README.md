@@ -4,9 +4,9 @@
 
 ## ![Score](/docs/images/logo.svg) What is Score?
 
-Score is an open source, platform-agnostic, container-based workload specification. This means you can define your workload once with the _Score Specification_ and then use a _Score Implementation_ CLI to translate it to multiple platforms, such as Helm, Docker Compose or Google Cloud Run.
+Score is an open source, platform-agnostic, container-based workload specification. This means you can define your workload once with the _Score Specification_ and then use a _Score Implementation_ to translate it to multiple platforms, such as Docker Compose, Kubernetes, Helm or Google Cloud Run.
 
-In the example below, a `score.yaml` file is executed via [score-compose](https://github.com/score-spec/score-compose/tree/main/examples) to generate a `compose.yaml` file, which allows the user to spin up a container via Docker Compose. The same `score.yaml` file is then used to generate a helm `values.yaml` file to be installed onto Kubernetes.
+In the example below, a `score.yaml` file is executed via [score-compose](https://github.com/score-spec/score-compose) to generate a `compose.yaml` file, which allows the user to spin up the workload via Docker Compose. The same `score.yaml` file is then run against [score-k8s](https://github.com/score-spec/score-k8s) to generate a `manifests.yaml` file for deployments with Kubernetes.
 
 ![demo.gif](/docs/images/demo.gif)
 
@@ -22,9 +22,9 @@ Using Score provides the following advantages:
 
 ## ![Score](/docs/images/logo.svg) Why Score?
 
-Cloud native developers often struggle with configuration inconsistencies between environments. This gets even more complicated when the technology stack in each environment is different. What if you use Docker Compose for local development, but Helm Charts to deploy to the Kubernetes-based development environment?
+Cloud native developers often struggle with configuration inconsistencies between environments. This gets even more complicated when the technology stack in each environment is different. What if you use Docker Compose for local development, but deploy to a Kubernetes-based development environment?
 
-Not only do you have to figure out Docker Compose and Helm, but you need to keep them in sync.
+Not only do you have to figure out Docker Compose and Kubernetes, but you need to keep them in sync.
 
 This results in various bottlenecks along the application delivery lifecycle.
 
@@ -44,15 +44,15 @@ By reducing the risk of wrongly specified or inconsistent configuration between 
 
 As shown in the graphic above, there are 3 core components to consider in the context of Score:
 
-The _Score Specification_ file is a platform-agnostic workload specification which can be run against a _Score Implementation_ (CLI) such as [score-compose](https://github.com/score-spec/score-compose) or [score-helm](https://github.com/score-spec/score-helm) to generate a platform configuration file such as `docker-compose.yaml` or a helm `values.yaml` file.
+The _Score Specification_ file is a platform-agnostic workload specification which can be run against a _Score Implementation_ such as [score-compose](https://github.com/score-spec/score-compose) or [score-k8s](https://github.com/score-spec/score-k8s) to generate a platform configuration file such as `docker-compose.yaml` or `manifests.yaml`.
 The generated configuration file can then be combined with environment-specific parameters to run the workload in the target environment.
 
 ## ![Installation](/docs/images/install.svg) Installation
 
 To install one of our reference _Score Implementations_, see the installation guide in each repository:
 
-- [score-compose](https://github.com/score-spec/score-compose#-installation)
-- [score-helm](https://github.com/score-spec/score-helm#-installation)
+- [score-compose](https://github.com/score-spec/score-compose?tab=readme-ov-file#-installation)
+- [score-k8s](https://github.com/score-spec/score-k8s?tab=readme-ov-file#installation)
 
 Can't find the implementation you are looking for? The _Score Specification_ has the potential to integrate with many container orchestration platforms and tooling such as Kustomize, Amazon ECS, Google Cloud Run, or Nomad. Help up shape the next generation of Score implementation CLI’s and start contributing [here](https://github.com/score-spec/spec/blob/main/roadmap.md#get-involved).
 
@@ -90,6 +90,12 @@ You can find our documentation at [docs.score.dev](https://docs.score.dev/docs/)
 See [Roadmap](roadmap.md). You can [submit an idea](https://github.com/score-spec/spec/issues/new) anytime.
 
 ### License
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+### Code of conduct
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
