@@ -44,17 +44,11 @@ By reducing the risk of wrongly specified or inconsistent configuration between 
 
 As shown in the graphic above, there are 3 core components to consider in the context of Score:
 
-The _Score Specification_ file is a platform-agnostic workload specification which can be run against a _Score Implementation_ such as [score-compose](https://github.com/score-spec/score-compose) or [score-k8s](https://github.com/score-spec/score-k8s) to generate a platform configuration file such as `docker-compose.yaml` or `manifests.yaml`.
-The generated configuration file can then be combined with environment-specific parameters to run the workload in the target environment.
+* **The Score Specification**: An open-source, platform-agnostic, container-based workload specification that allows developers to describe their workload's runtime requirements in a straightforward and familiar manner. The current version of the specification is stored [here](./score-spec-v1b1.yaml). For a more detailed specification reference, check out our [developer documentation](https://docs.score.dev/docs/score-specification/score-spec-reference/).
 
-## ![Installation](/docs/images/install.svg) Installation
+* **A Score Implementation**: The Score Specification is executed against a Score Implementation to generate a platform configuration file. Score offers two reference implementations out of the box: [score-compose](https://github.com/score-spec/score-compose) and [score-k8s](https://github.com/score-spec/score-k8s), which generate docker-compose.yaml and manifests.yaml files, respectively. Check our [documentation](https://docs.score.dev/docs/score-implementation/other/) for other available implementations.
 
-To install one of our reference _Score Implementations_, see the installation guide in each repository:
-
-- [score-compose](https://github.com/score-spec/score-compose?tab=readme-ov-file#-installation)
-- [score-k8s](https://github.com/score-spec/score-k8s?tab=readme-ov-file#installation)
-
-Can't find the implementation you are looking for? The _Score Specification_ has the potential to integrate with many container orchestration platforms and tooling such as Kustomize, Amazon ECS, Google Cloud Run, or Nomad. Help up shape the next generation of Score implementation CLI’s and start contributing [here](https://github.com/score-spec/spec/blob/main/roadmap.md#get-involved).
+* **The Generated Configuration File**: This file can be combined with environment-specific parameters to run the workload in the target environment.
 
 ## ![Get involved](/docs/images/get-involved.svg) Get involved
 
