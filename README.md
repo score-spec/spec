@@ -44,7 +44,7 @@ By reducing the risk of wrongly specified or inconsistent configuration between 
 
 As shown in the graphic above, there are 3 core components to consider in the context of Score:
 
-* **The Score Specification**: An open-source, platform-agnostic, container-based workload specification that allows developers to describe their workload's runtime requirements in a straightforward and familiar manner. The current version of the specification is stored [here](./score-spec-v1b1.yaml). For a more detailed specification reference, check out our [developer documentation](https://docs.score.dev/docs/score-specification/score-spec-reference/).
+* **The Score Specification**: An open-source, platform-agnostic, container-based workload specification that allows developers to describe their workload's runtime requirements in a straightforward and familiar manner. The current version of the specification schema is stored [here](https://github.com/score-spec/schema/blob/main/score-v1b1.json). For a more detailed specification reference, check out our [developer documentation](https://docs.score.dev/docs/score-specification/score-spec-reference/).
 
 * **A Score Implementation**: The Score Specification is executed against a Score Implementation to generate a platform configuration file. Score offers two reference implementations out of the box: [score-compose](https://github.com/score-spec/score-compose) and [score-k8s](https://github.com/score-spec/score-k8s), which generate `docker-compose.yaml` and `manifests.yaml` files, respectively. Check our [documentation](https://docs.score.dev/docs/score-implementation/other/) for other available implementations.
 
