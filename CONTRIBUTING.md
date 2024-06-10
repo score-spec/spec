@@ -1,80 +1,99 @@
 # Contributor guidelines
 
-We'd love to accept your patches and contributions to this project. There are just a few guidelines to follow.
+We are excited that you're interested in contributing to our project! Your efforts help us improve and grow.
 
-When contributing to this project, you must agree that you have authored the content, that you have the necessary rights to the content and that the content you contribute may be provided under the [APACHE LICENSE, VERSION 2.0](LICENSE).
+## Code of conduct
 
-### What do I need to know to help?
+This project adheres to a [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to abuse@score.dev.
 
-If you are looking to help to with a code contribution, our project uses Go Lang. If you don't feel ready to make a code contribution yet, no problem! You can also check out the documentation <https://github.com/score-spec/docs>.
+## Ways to contribute
 
-If you are interested in making a code contribution and would like to learn more about the technologies that we use, check out the list below.
+There are many ways for you to contribute to the Score project, for example:
 
-- [Docker Compose](https://docs.docker.com/compose/)
-- [GoLang](https://go.dev)
-- [Helm](https://helm.sh/docs/)
-- [Humanitec](https://docs.humanitec.com/introduction/readme)
+- **User feedback:** Share your feedback and impressions about the Score specification or any of our reference implementations. Your insights are incredibly helpful for us to further improve and develop the project.
 
-### How do I make a contribution?
+- **Community engagement:** Contribute through speaking engagements, social media, or blog posts.
 
-Never made an open-source contribution before? Wondering how contributions work in our project? Here's a quick rundown!
+- **Design:**  Assist with web design to improve our online presence.
 
-1. Find an issue that you are interested in addressing or a feature that you would like to add.
+- **Documentation:** Help us identify and fix gaps or issues in our developer documentation.
+
+- **Bug reports & fixes:** Encountered a bug or unexpected behavior? Please report it to us, and if possible, contribute a fix.
+
+- **Feature enhancements:** Propose or work on new features for existing Score implementations.
+
+- **Write your own Score implementation:** Score has the potential to integrate with various container orchestration tools such as Google Cloud Run, Azure Container Apps, or HashiCorp Nomad. If you're interested in creating your own Score implementation, we'd love to hear about your plans.
+
+If you're eager to contribute but unsure where to start, reach out to us (e.g., via  [Slack](https://join.slack.com/t/scorecommunity/shared_invite/zt-2a0x563j7-i1vZOK2Yg2o4TwCM1irIuA)), and we can explore suitable tasks together.
+
+## Finding an issue
+
+You can discover reported bugs, feature ideas, or discussion topics in the "Issue" section of each repository within the Score organization. Here's where you'll typically find them:
+
+- Spec repository: [This repository](https://github.com/score-spec/spec) contains issues related to the specification or the overall behavior of reference implementations.
+
+- Reference implementation repositories: Repositories like [score-compose](https://github.com/score-spec/score-compose), [score-k8s](https://github.com/score-spec/score-k8s), and [score-helm](https://github.com/score-spec/score-helm) each host issues specific to their respective implementations.
+
+We strive to tag issues with labels such as "good first issue" and "help wanted" to indicate which tasks are up for grabs. If you're having trouble finding a suitable issue, don't worry! There's likely still an opportunity for you to contribute. Reach out to us, and we'll be delighted to help you find a fitting task to start with.
+
+## How to get in touch
+
+You can reach us anytime on the [Score Slack](https://join.slack.com/t/scorecommunity/shared_invite/zt-2a0x563j7-i1vZOK2Yg2o4TwCM1irIuA), where we'll be announcing community meetings and events. Additionally, feel free to drop in during our office hours every Thursday between 3-4 pm CET to discuss any issues or questions you have.
+
+## Signoff Your Commits
+
+We kindly ask contributors to sign off on commits submitted to our project's repositories. This sign-off, known as the Developer Certificate of Origin (DCO), verifies that you are the author of the code and have the necessary rights to contribute it. To provide your sign-off, include the following line in your commit messages, ensuring it matches your git user and email:
+
+```bash
+This is my commit message
+
+Signed-off-by: Your Name <your.name@example.com>
+```
+
+Git has a -s command line option to do this automatically:
+
+``` bash
+git commit -s -m 'This is my commit message'
+```
+
+If you forgot to do this and have not yet pushed your changes to the remote repository, you can amend your commit with the sign-off by running
+
+``` bash
+git commit --amend -s
+```
+
+## Example contribution workflow
+
+Here's a quick rundown of how a typical code- or documentation contribution would look like in our project:
+
+1. Find a contribution you would like to make. Learn more about [ways to contribute](#ways-to-contribute)
+
 2. Fork the repository associated with the issue to your local GitHub organization. This means that you will have a copy of the repository under **your-GitHub-username/repository-name**.
+
 3. Clone the repository to your local machine using **git clone**.
+
 4. Create a new branch for your fix using **git checkout -b your-branch-name**.
+
 5. Make the appropriate changes for the issue you are trying to address or the feature that you want to add.
+
 6. Use **git add insert-paths-of-changed-files-here** to add the file contents of the changed files to the "snapshot" git uses to manage the state of the project, also known as the index.
+
 7. Use **git commit -s -m "Insert a brief message of the changes made here"** to store the contents of the index with a descriptive message.
+
 8. Push the changes to the remote repository using **git push origin your-branch-name**.
+
 9. Submit a pull request to the upstream repository.
+
 10. Title the pull request with a brief description of the changes made and the issue or bug number associated with your change. For example, you can title an issue like so, "Added more log outputting to resolve #4352".
-11. In the description of the pull request, explain the changes that you made, any issues you think exist with the pull request you made, and any questions you have for the maintainer. It's OK if your pull request is not perfect (no pull request is), the reviewer will be able to help you resolve any problems and improve it!
+
+11. In the description of the pull request, explain the changes that you made, any issues you think exist with the pull request you made, and any questions you have for the maintainer. It's OK if your pull request is not perfect (no pull request is), the reviewer will be able to help you resolve any problems and improve it.
+
 12. Wait for the pull request to be reviewed by a maintainer.
+
 13. Introduce changes to the pull request if the reviewing maintainer recommends them.
+
 14. Merge your pull request once approved.
+
 15. Celebrate your success after your pull request is merged!
 
-## Feature requests
-
-## Code reviews
-
-All submissions, including submissions by project members, require review.
-
-Score uses GitHub pull requests for this purpose.
-
-The general workflow for code contributions:
-
-1. Submit/find an issue in this repository.
-1. Clone the relevant repo.
-1. Make your code change.
-1. Write tests and update docs.
-1. Build and test locally.
-1. Submit a pull request.
-1. Iterate as needed.
-1. Your PR will be approved and merged.
-
-### Where can I go for help?
-
-If you need help, you can create an [issue](https://github.com/score-spec/spec/issues/new).
-
-### Reporting bugs
-
-#### Before submitting an issue
-
-A good bug report shouldn't leave others needing to chase you up for more information. Therefore, we ask you to investigate carefully, collect information and describe the issue in detail in your report. Please complete the following steps in advance to help us fix any potential bug as fast as possible.
-
-- Make sure that you are using the latest version.
-- Determine if your bug is really a bug and not an error on your side for example using incompatible environment components/versions (Make sure that you have read the [documentation](https://github.com/score-spec/docs). If you are looking for support.
-- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug.
-- Also make sure to search the internet (including Stack Overflow) to see if users outside the GitHub community have discussed the issue.
-- Collect information about the bug:
-  - Stack trace (Traceback).
-  - OS, Platform and Version (Windows, Linux, macOS, x86, ARM).
-  - Version of the interpreter, compiler, SDK, runtime environment, package manager, depending on what seems relevant.
-  - Possibly your input and the output.
-  - Can you reliably reproduce the issue?
-
-### What does the Code of Conduct mean for me?
-
-Our [Code of Conduct](CODE_OF_CONDUCT.md) means that you are responsible for treating everyone on the project with respect and courtesy, regardless of their identity. If you are the victim of any inappropriate behavior or comments as described in our Code of Conduct, we are here for you and will do the best to ensure that the abuser is reprimanded appropriately, per our code.
+ If you have any questions or need assistance, feel free to reach out to us. We're here to help!
