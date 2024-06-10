@@ -25,14 +25,17 @@ To be considered for a maintainer role, a contributor must demonstrate the follo
 A new maintainer must be proposed by an existing maintainer and approved through a simple majority vote by the current maintainers.
 
 ## Removing a Maintainer
+
 Maintainers may resign at their discretion if they are unable to continue fulfilling their responsibilities.
 
 A maintainer may also be removed due to inactivity, failure to meet responsibilities, violation of the [Code of Conduct](./CODE_OF_CONDUCT.md), or other significant reasons. Inactivity is defined as minimal or no participation in the project for over a year without a planned return to active status.
 
 ## Meetings
+
 Where feasible, maintainers are expected to attend public developer meetings and community calls.
 
 Closed meetings will be held to address security issues or Code of Conduct violations. Any maintainer can schedule such a meeting upon receipt of a relevant report. All current maintainers, except those implicated in a Code of Conduct violation, must be invited to these closed meetings.
 
 ## Voting
+
 While the majority of project decisions are made through "lazy consensus," there may be instances where maintainers need to vote on specific actions or changes. Votes can be conducted during developer meetings, and any maintainer has the right to request a formal vote.
