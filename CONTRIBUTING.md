@@ -34,11 +34,11 @@ You can discover reported bugs, feature ideas, or discussion topics in the "Issu
 
 - Reference implementation repositories: Repositories like [score-compose](https://github.com/score-spec/score-compose), [score-k8s](https://github.com/score-spec/score-k8s), and [score-helm](https://github.com/score-spec/score-helm) each host issues specific to their respective implementations.
 
-We strive to tag issues with labels such as "good first issue" and "help wanted" to indicate which tasks are up for grabs. If you're having trouble finding a suitable issue, don't worry! There's likely still an opportunity for you to contribute. Reach out to us, and we'll be delighted to help you find a fitting task to start with.
+We strive to tag issues with labels such as "good first issue" and "help wanted" to indicate which tasks are up for grabs. If you're having trouble finding a suitable issue, don't worry! As mentioned above, there's likely still an opportunity for you to contribute. Reach out to us, and we'll help you find a task to start with.
 
 ## How to get in touch
 
-You can reach us anytime on the [Score Slack](https://join.slack.com/t/scorecommunity/shared_invite/zt-2a0x563j7-i1vZOK2Yg2o4TwCM1irIuA), where we'll be announcing community meetings and events. Additionally, feel free to drop in during our office hours every Thursday between 3-4 pm CET to discuss any issues or questions you have.
+You can reach us anytime on the [Score Slack](https://join.slack.com/t/scorecommunity/shared_invite/zt-2a0x563j7-i1vZOK2Yg2o4TwCM1irIuA), where we'll be also be announcing community meetings and events. Additionally, feel free to drop in during our office hours every Thursday between 3-4 pm CET to discuss any issues or questions you have.
 
 ## Signoff Your Commits
 
@@ -66,7 +66,7 @@ git commit --amend -s
 
 Here's a quick rundown of how a typical code- or documentation contribution would look like in our project:
 
-1. Find a contribution you would like to make. Learn more about [ways to contribute](#ways-to-contribute)
+1. Find a contribution you would like to make. Learn more about [ways to contribute](#ways-to-contribute).
 
 2. Fork the repository associated with the issue to your local GitHub organization. This means that you will have a copy of the repository under **your-GitHub-username/repository-name**.
 
