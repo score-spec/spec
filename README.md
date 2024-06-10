@@ -50,7 +50,7 @@ As shown in the graphic above, there are 3 core components to consider in the co
 
 * **The Generated Configuration File**: This file can be combined with environment-specific parameters to run the workload in the target environment.
 
-## ![Get involved](/docs/images/get-involved.svg) Get involved
+## ![Get in touch](/docs/images/get-involved.svg) Get in touch
 
 - Contact us via email:
   - team@score.dev
