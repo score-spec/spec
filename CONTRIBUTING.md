@@ -40,7 +40,11 @@ We strive to tag issues with labels such as "good first issue" and "help wanted"
 
 You can reach us anytime on the [Score Slack](https://join.slack.com/t/scorecommunity/shared_invite/zt-2a0x563j7-i1vZOK2Yg2o4TwCM1irIuA), where we'll be also be announcing community meetings and events. Additionally, feel free to drop in during our office hours every Thursday between 3-4 pm CET to discuss any issues or questions you have.
 
-## Signoff Your Commits
+## Legal
+
+When contributing to this project, you must agree that you have authored the content, that you have the necessary rights to the content and that the content you contribute may be provided under the [APACHE LICENSE, VERSION 2.0](LICENSE).
+
+### Signoff Your Commits
 
 We kindly ask contributors to sign off on commits submitted to our project's repositories. This sign-off, known as the Developer Certificate of Origin (DCO), verifies that you are the author of the code and have the necessary rights to contribute it. To provide your sign-off, include the following line in your commit messages, ensuring it matches your git user and email:
 
