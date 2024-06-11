@@ -50,30 +50,12 @@ As shown in the graphic above, there are 3 core components to consider in the co
 
 * **The Generated Configuration File**: This file can be combined with environment-specific parameters to run the workload in the target environment.
 
-## ![Get involved](/docs/images/get-involved.svg) Get involved
+## ![Get in touch](/docs/images/get-involved.svg) Get in touch
 
-- Give the project a star!
 - Contact us via email:
   - team@score.dev
   - abuse@score.dev
 - Join us on [Slack](https://join.slack.com/t/scorecommunity/shared_invite/zt-2a0x563j7-i1vZOK2Yg2o4TwCM1irIuA)
-- See our [documentation](https://docs.score.dev/docs/overview/)
-
-## ![Contributing](/docs/images/contributing.svg) Contributing
-
-- Write a [blog post](https://score.dev/blog).
-- Provide feedback on our [roadmap](https://github.com/score-spec/spec/blob/main/roadmap.md#get-involved).
-- Contribute.
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also open an issue with the tag `enhancement`.
-
-1. Fork the Project.
-2. Create your Feature Branch. `git checkout -b feature/feature-name`
-3. Commit your Changes. `git commit -s -m "Add some AmazingFeature"`
-4. Push to the Branch. `git push origin feature/feature-name`
-5. Open a Pull Request.
 
 ### Documentation
 
@@ -82,6 +64,10 @@ You can find our documentation at [docs.score.dev](https://docs.score.dev/docs/)
 ### Roadmap
 
 See [Roadmap](roadmap.md). You can [submit an idea](https://github.com/score-spec/spec/issues/new) anytime.
+
+### Contribution Guidelines and Governance
+
+Our general contributor guidelines can be found in [CONTRIBUTING.md](CONTRIBUTING.md). Please note that some repositories may have additional guidelines. For more information on our governance model, please refer to [GOVERNANCE.md](GOVERNANCE.md).
 
 ### License
 
