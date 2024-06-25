@@ -54,7 +54,7 @@ Connect with us through the [Score Slack channel](https://join.slack.com/t/score
 
 We host regular community meetings to discuss updates, share ideas, and collaborate. Here are the details:
 
-| Asset | Link |
+| Community call | Info |
 |:-----------|:------------|
 | Meeting Link | Join via [Google Meet](https://meet.google.com/znt-usdc-hzs) or call +49 40 8081618260 (Pin: 599 887 196)
 | Meeting Agenda & Notes | Add to our agenda or review minutes [here](https://github.com/score-spec/spec/discussions/categories/community-meetings)
