@@ -1,10 +1,8 @@
-# Score
-
 ![Score banner](/docs/images/banner.png)
 
 ## ![Score](/docs/images/logo.svg) What is Score?
 
-Score is an open source, platform-agnostic, container-based workload specification. This means you can define your workload once with the _Score Specification_ and then use a _Score Implementation_ to translate it to multiple platforms, such as Docker Compose, Kubernetes, Helm or Google Cloud Run.
+Score is an open source, platform-agnostic, container-based workload specification. This means you can define your workload once with the Score Specification and then use a Score Implementation to translate it to multiple platforms, such as Docker Compose, Kubernetes, Helm or Google Cloud Run.
 
 In the example below, a `score.yaml` file is executed via [score-compose](https://github.com/score-spec/score-compose) to generate a `compose.yaml` file, which allows the user to spin up the workload via Docker Compose. The same `score.yaml` file is then run against [score-k8s](https://github.com/score-spec/score-k8s) to generate a `manifests.yaml` file for deployments with Kubernetes.
 
@@ -52,10 +50,17 @@ As shown in the graphic above, there are 3 core components to consider in the co
 
 ## ![Get in touch](/docs/images/get-involved.svg) Get in touch
 
-- Contact us via email:
-  - team@score.dev
-  - abuse@score.dev
-- Join us on [Slack](https://join.slack.com/t/scorecommunity/shared_invite/zt-2a0x563j7-i1vZOK2Yg2o4TwCM1irIuA)
+Connect with us through the [Score Slack channel](https://join.slack.com/t/scorecommunity/shared_invite/zt-2a0x563j7-i1vZOK2Yg2o4TwCM1irIuA) or contact us via email at team@score.dev.
+
+We host regular community meetings to discuss updates, share ideas, and collaborate. Here are the details:
+
+| Asset | Link |
+|:-----------|:------------|
+| Meeting Link | Join via [Google Meet](https://meet.google.com/znt-usdc-hzs) or call +49 40 8081618260 (Pin: 599 887 196)
+| Meeting Agenda & Notes | Add to our agenda or review minutes [here](https://github.com/score-spec/spec/discussions/categories/community-meetings)
+| Meeting Time | 1:00-2:00pm UTC, every first Thursday of the month
+
+If you can't attend at the scheduled time but would like to discuss something, please reach out. We’re happy to arrange an ad-hoc meeting that fits your schedule.
 
 ### Documentation
 
