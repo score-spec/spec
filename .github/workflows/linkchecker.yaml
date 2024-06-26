@@ -13,6 +13,7 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.10.0
         with:
+          # Providing default parameters plus an exclude for Google Meet which produces a network error when checked
           args: --verbose --no-progress './**/*.md' './**/*.html' --exclude https://meet.google.com
           fail: true
         env:
