@@ -1,52 +1,91 @@
 ![Score banner](/docs/images/banner.png)
 
-## ![Score](/docs/images/logo.svg) What is Score?
+## ![Score](/docs/images/logo.svg) The Score Specification
 
-Score is an open source, platform-agnostic, container-based workload specification. This means you can define your workload once with the Score Specification and then use a Score Implementation to translate it to multiple platforms, such as Docker Compose, Kubernetes, Helm or Google Cloud Run.
+Score is an open-soure workload specification designed to simplify development for cloud-native developers. The specification enables you to describe your workload's configuration in a vendor-neutral way, eliminating the need for tooling-specific syntax from platforms such as Docker Compose or Kubernetes. By leveraging familiar concepts and semantics, defining a workload’s configuration becomes as simple as stating, “I want a database of type X and an event queue of type Y to accompany my workload”.
 
-In the example below, a `score.yaml` file is executed via [score-compose](https://github.com/score-spec/score-compose) to generate a `compose.yaml` file, which allows the user to spin up the workload via Docker Compose. The same `score.yaml` file is then run against [score-k8s](https://github.com/score-spec/score-k8s) to generate a `manifests.yaml` file for deployments with Kubernetes.
+Below is an example of a Score specification describing a web server that queries a Postgres database on each request. Typically, this file is saved alongside the workload's source code in version control.
 
-![demo.gif](/docs/images/demo.gif)
+```YAML
+# The version string helps identify the Score file syntax
+apiVersion: score.dev/v1b1
+metadata:
+  name: sample
 
-This project aims to reduce developer toil and cognitive load by only having to define a single specification file that works across multiple platforms.
+# A set of containers deployed together for this Workload.
+containers:
+  main:
+    # The "default" image for our service. When deploying, we may override this with a particular tag.
+    image: ghcr.io/score-spec/sample-app-gif:sha-2533037
+    variables:
+      # Pass the resource outputs to our container as environment variables. The Score implementation takes care of securing any secret access as needed.
+      PG_CONNECTION_STRING: "postgresql://${resources.db.username}:${resources.db.password}@${resources.db.host}:${resources.db.port}/${resources.db.database}?sslmode=disable"
 
-Using Score provides the following advantages:
+# The service ports indicate which ports of the Workload are exposed for other services to call.
+service:
+  ports:
+    web:
+      port: 8080
 
-- **Creates a single source of truth for your workload's configuration**: Developers define their workload once with the _Score Specification_, independently of the environments it will run in.
+# Each resource dependency has a name and definition that helps the Score implementation link or provision the required resource.
+resources:
+  db:
+    # This database is specific to this Workload and not shared.
+    type: postgres
+  dns:
+    # Ensure a dns name is available for request routing.
+    type: dns
+  route:
+    # We want to ensure that requests on the Workload hostname go to our service port.
+    type: route
+    params:
+      host: ${resources.dns.host}
+      path: /
+      port: 8080
+```
 
-- **Reduces cognitive load**: The _Score Specification_ is tightly scoped and shields developers from the configurational complexity of container orchestrators and tooling. By exposing only core workload constructs, developers can keep their focus.
+### Key Features of Score
 
-- **Seperates concerns between dev and ops**: The _Score Specification_ clearly defines the responsibility of the developer. For the operations team it presents a recipe on how a workload should be run, providing clear instructions for the platform on the receiving end.
+Looking at the example above, you'll notice that the Score specification is:
 
-## ![Score](/docs/images/logo.svg) Why Score?
+* **platform-agnostic**: Score is not tied to any specific platform or tool. It integrates seamlessly with Docker, Kubernetes, Helm, and other container orchestration platforms, allowing developers to define the Score spec once, independently of the target environments.
 
-Cloud native developers often struggle with configuration inconsistencies between environments. This gets even more complicated when the technology stack in each environment is different. What if you use Docker Compose for local development, but deploy to a Kubernetes-based development environment?
+* **environment-agnostic**: Score captures the configuration that remains consistent across all environments, effectively separating environment-agnostic from environment-specific configurations. For instance, the database connection string `PG_CONNECTION_STRING` in the example above is parameterized (i.e. described in an environment-agnostic way), allowing it to be resolved in each target environment with the appropriate credentials.
 
-Not only do you have to figure out Docker Compose and Kubernetes, but you need to keep them in sync.
+* **tightly scoped**: Score describes workload-level properties. It does not intend to be a fully featured YAML replacement for any platform, thereby shielding developers from the complexity of container orchestration tools like Kubernetes.
 
-This results in various bottlenecks along the application delivery lifecycle.
+* **declarative**: With Score, developers declare what their workload requires to run as part of the Score specification. The platform in the target environment is responsible for resolving individual runtime requirements. This establishes a contract between dev and ops: If the requirements listed in the spec are honoured, the workload will run as intended.
 
-🎵 Tech & tools that require specialized knowledge and operational expertise are imposed on developers.
+The current version of the specification schema is stored [here](https://github.com/score-spec/schema/blob/main/score-v1b1.json). For a more detailed specification reference, check out our [developer documentation](https://docs.score.dev/docs/score-specification/score-spec-reference/).
 
-🎵 Different configuration rules, constructs and values between local and remote environments increase the risk of configuration inconsistencies.
+## ![Score](/docs/images/logo.svg) Implementation of the Score Specification
 
-🎵 Keeping a multitude of platforms and environment-specific configuration files in sync leads to repetitive configuration work.
-
-Score provides a single, easy to understand specification for each workload that describes its runtime requirements in a declarative manner. The `score.yaml` file allows generating configuration in an automated, standardized and one directional way.
-
-By reducing the risk of wrongly specified or inconsistent configuration between environments, are we hoping to foster focus and joy for developers in their day-to-day work.
-
-## ![Score](/docs/images/logo.svg) How does Score work?
+Once you define your workload's runtime requirements with the Score specification, a Score Implementation translates it into the desired target output format as illustrated in the graphic below.
 
 ![how-score-works](/docs/images/how-score-works.png)
 
-As shown in the graphic above, there are 3 core components to consider in the context of Score:
+Currently, we offer two reference implementations:
 
-* **The Score Specification**: An open-source, platform-agnostic, container-based workload specification that allows developers to describe their workload's runtime requirements in a straightforward and familiar manner. The current version of the specification schema is stored [here](https://github.com/score-spec/schema/blob/main/score-v1b1.json). For a more detailed specification reference, check out our [developer documentation](https://docs.score.dev/docs/score-specification/score-spec-reference/).
+* [score-compose](https://github.com/score-spec/score-compose): Converts your Score specification into a `docker-compose.yaml` file.
+* [score-k8s](https://github.com/score-spec/score-k8s): Generates `manifests.yaml` files from your Score specification to deploy to a Kubernetes cluster.
 
-* **A Score Implementation**: The Score Specification is executed against a Score Implementation to generate a platform configuration file. Score offers two reference implementations out of the box: [score-compose](https://github.com/score-spec/score-compose) and [score-k8s](https://github.com/score-spec/score-k8s), which generate `docker-compose.yaml` and `manifests.yaml` files, respectively. Check our [documentation](https://docs.score.dev/docs/score-implementation/other/) for other available implementations.
+These implementations are suitable for practical use and serve as blueprints for creating custom implementations. If you're interested in building a Score implementation but need guidance, feel free to reach out — we're here to help!
 
-* **The Generated Configuration File**: This file can be combined with environment-specific parameters to run the workload in the target environment.
+Community-built implementations are typically hosted and maintained by their creators. These can be referenced in our documentation or kept private. If a contributor wishes to donate their implementation to our project, we are open to exploring that option.
+
+## ![Score](/docs/images/logo.svg) Benefits of Score
+
+Score aims to reduce developer toil and cognitive load by only having to define a single specification file that works across multiple platforms. Cloud native developers often struggle with configuration inconsistencies between environments. This gets even more complicated when the technology stack in each environment is different. For example: What if you use Docker Compose for local development, but deploy to a Kubernetes-based development environment? Not only do you have to figure out Docker Compose and Kubernetes, but you need to keep them in sync. This results in various bottlenecks along the application delivery lifecycle:
+
+- Tech & tools that require specialized knowledge and operational expertise are imposed on developers.
+
+- Different configuration rules, constructs and values between local and remote environments increase the risk of configuration inconsistencies.
+
+- Keeping a multitude of platforms and environment-specific configuration files in sync leads to repetitive configuration work.
+
+Score provides a single, easy to understand specification for each workload that describes its runtime requirements in a declarative manner. The `score.yaml` file allows generating configuration in an automated, standardized and one directional way.
+
+By reducing the risk of incorrect or inconsistent configurations across environments, Score helps developers focus on their core tasks and enhances their day-to-day work experience.
 
 ## ![Get in touch](/docs/images/get-involved.svg) Get in touch
 
