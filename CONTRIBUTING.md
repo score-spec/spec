@@ -24,7 +24,7 @@ There are many ways for you to contribute to the Score project, for example:
 
 - **Write your own Score implementation:** Score has the potential to integrate with various container orchestration tools such as Google Cloud Run, Azure Container Apps, or HashiCorp Nomad. If you're interested in creating your own Score implementation, we'd love to hear about your plans.
 
-If you're eager to contribute but unsure where to start, reach out to us (e.g., via the `#score` channel in the CNCF Slack (https://slack.cncf.io/)), and we can explore suitable tasks together.
+If you're eager to contribute but unsure where to start, reach out to us (e.g., the [Score](https://cloud-native.slack.com/archives/C07DN0D1UCW) channel in the CNCF Slack (<https://slack.cncf.io/>)), and we can explore suitable tasks together.
 
 ## Finding an issue
 
@@ -38,7 +38,7 @@ We strive to tag issues with labels such as "good first issue" and "help wanted"
 
 ## How to get in touch
 
-You can reach us anytime on the `#score` channel in the CNCF Slack (https://slack.cncf.io/), where we'll be also be announcing community meetings and events. Additionally, feel free to drop in during our office hours every Thursday between 3-4 pm CET to discuss any issues or questions you have.
+You can reach us anytime on the [Score](https://cloud-native.slack.com/archives/C07DN0D1UCW) channel in the CNCF Slack (<https://slack.cncf.io/>), where we'll be also be announcing community meetings and events. Additionally, feel free to drop in during our office hours every Thursday between 3-4 pm CET to discuss any issues or questions you have.
 
 ## Legal
 
