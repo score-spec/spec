@@ -89,7 +89,7 @@ By reducing the risk of incorrect or inconsistent configurations across environm
 
 ## ![Get in touch](/docs/images/get-involved.svg) Get in touch
 
-Connect with us through the [Score Slack channel](https://join.slack.com/t/scorecommunity/shared_invite/zt-2ly2l3vpg-zQCCtiEsQ7Tp3PdEWY07rA) or contact us via email at team@score.dev.
+Connect with us through the [Score](https://cloud-native.slack.com/archives/C07DN0D1UCW) channel in the CNCF Slack (<https://slack.cncf.io/>) or contact us via email at team@score.dev.
 
 We host regular community meetings to discuss updates, share ideas, and collaborate. Here are the details:
 
