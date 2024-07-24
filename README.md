@@ -1,6 +1,7 @@
 ![Score banner](/docs/images/banner.png)
 
-## ![Score](/docs/images/logo.svg) The Score Specification
+## ![Score](/docs/images/logo.svg) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fscore-spec%2Fspec.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fscore-spec%2Fspec?ref=badge_shield)
+The Score Specification
 
 Score is an open-source workload specification designed to simplify development for cloud-native developers. The specification enables you to describe your workload's configuration in a vendor-neutral way, eliminating the need for tooling-specific syntax from platforms such as Docker Compose or Kubernetes. By leveraging familiar concepts and semantics, defining a workload’s configuration becomes as simple as stating, “I want a database of type X and an event queue of type Y to accompany my workload”.
 
@@ -116,6 +117,9 @@ Our general contributor guidelines can be found in [CONTRIBUTING.md](CONTRIBUTIN
 ### License
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fscore-spec%2Fspec.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fscore-spec%2Fspec?ref=badge_large)
 
 ### Code of conduct
 
