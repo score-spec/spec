@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fscore-spec%2Fspec.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fscore-spec%2Fspec?ref=badge_shield) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9204/badge)](https://www.bestpractices.dev/projects/9204)
+
 ![Score banner](/docs/images/banner.png)
 
 ## ![Score](/docs/images/logo.svg) The Score Specification
