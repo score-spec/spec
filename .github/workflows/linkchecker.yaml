@@ -1,5 +1,5 @@
 ---
-name: "Code Quality: Link Checker"
+name: "CI"
 
 on:
   pull_request:
@@ -18,3 +18,11 @@ jobs:
           fail: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+
+      - name: Check Schema
+        run: make test

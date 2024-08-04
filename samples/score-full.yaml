@@ -1,0 +1,75 @@
+apiVersion: score.dev/v1b1
+metadata:
+  name: example-workload-name123
+  extra-key: extra-value
+  annotations:
+    prefix.com/Another-Key_Annotation.2: something else
+service:
+  ports:
+    port-one:
+      port: 1000
+      protocol: TCP
+      targetPort: 10000
+    port-two2:
+      port: 8000
+containers:
+  container-one1:
+    image: localhost:4000/repo/my-image:tag
+    command: ["/bin/sh", "-c"]
+    args: ["hello", "world"]
+    resources:
+      requests:
+        cpu: 1000m
+        memory: 10Gi
+      limits:
+        cpu: "0.24"
+        memory: 128M
+    variables:
+      SOME_VAR: some content here
+    files:
+    - target: /my/file
+      mode: "0600"
+      source: file.txt
+    - target: /my/other/file
+      content: |
+        some multiline
+        content
+    volumes:
+    - source: volume-name
+      target: /mnt/something
+      path: /sub/path
+      readOnly: false
+    - source: volume-two
+      target: /mnt/something-else
+    livenessProbe:
+      httpGet:
+        port: 8080
+        path: /livez
+    readinessProbe:
+      httpGet:
+        host: 127.0.0.1
+        port: 80
+        scheme: HTTP
+        path: /readyz
+        httpHeaders:
+        - name: SOME_HEADER
+          value: some-value-here
+  container-two2:
+    image: .
+resources:
+  resource-one1:
+    metadata:
+      annotations:
+        Default-Annotation: this is my annotation
+        prefix.com/Another-Key_Annotation.2: something else
+      extra-key: extra-value
+    type: Resource-One
+    class: default
+    params:
+      extra:
+        data: here
+  resource-two2:
+    type: Resource-Two
+  resource-three:
+    type: Type-Three
+    id: shared-type-three
