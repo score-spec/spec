@@ -30,7 +30,7 @@ endif
 ## Test that the score schema matches the json-schema reference
 .PHONY: test-schema
 test-schema: ${GOPATH}/bin/jv
-	${GOPATH}/bin/jv --assertformat --assertcontent https://json-schema.org/draft/2020-12/schema ./score-v1b1.json
+	${GOPATH}/bin/jv --assert-format --assert-content https://json-schema.org/draft/2020-12/schema ./score-v1b1.json
 	@echo "Schema is a valid jsonschema"
 
 ## Test that the given score examples in $SCORE_EXAMPLES_DIR match the schema
@@ -39,7 +39,7 @@ test-examples: ${GOPATH}/bin/jv
 ifeq ($(SCORE_EXAMPLES_DIR),)
 	$(error SCORE_EXAMPLES_DIR must be set)
 endif
-	find ${SCORE_EXAMPLES_DIR} -name 'score*.yaml' -print -exec ${GOPATH}/bin/jv --assertformat --assertcontent ./score-v1b1.json {} \;
+	find ${SCORE_EXAMPLES_DIR} -name 'score*.yaml' -print -exec ${GOPATH}/bin/jv --assert-format --assert-content ./score-v1b1.json {} \;
 	@echo "Schema matches all samples"
 
 ## Run all tests
