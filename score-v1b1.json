@@ -1,0 +1,410 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://score.dev/schemas/score",
+  "title": "Score schema",
+  "description": "Score workload specification",
+  "type": "object",
+  "required": [
+    "apiVersion",
+    "metadata",
+    "containers"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "apiVersion": {
+      "description": "The declared Score Specification version.",
+      "type": "string",
+      "pattern": "^score\\.dev/v1b1$"
+    },
+    "metadata": {
+      "description": "The metadata description of the Workload.",
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "name": {
+          "description": "A string that can describe the Workload. This must be a valid RFC1123 Label Name of up to 63 characters, including a-z, 0-9, '-' but may not start or end with '-'.",
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 63,
+          "pattern": "^[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
+        },
+        "annotations": {
+          "description": "Annotations that apply to the Workload. The annotation can contain A-Z, a-z, 0-9, and '-' and may contain an optional /-separated RFC1123 Host Name prefix.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "propertyNames": {
+            "minLength": 2,
+            "maxLength": 316,
+            "pattern": "^(([a-z0-9][a-z0-9-]{0,61}[a-z0-9])(\\.[a-z0-9][a-z0-9-]{0,61}[a-z0-9])*/)?[A-Za-z0-9][A-Za-z0-9._-]{0,61}[A-Za-z0-9]$"
+          }
+        }
+      }
+    },
+    "service": {
+      "description": "The service that the workload provides.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ports": {
+          "description": "The set of named network ports published by the service. The service name must be a valid RFC1123 Label Name of up to 63 characters, including a-z, 0-9, '-' but may not start or end with '-'.",
+          "type": "object",
+          "propertyNames": {
+            "minLength": 2,
+            "maxLength": 63,
+            "pattern": "^[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/servicePort"
+          }
+        }
+      }
+    },
+    "containers": {
+      "description": "The set of named containers in the Workload. The container name must be a valid RFC1123 Label Name of up to 63 characters, including a-z, 0-9, '-' but may not start or end with '-'.",
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/container"
+      },
+      "propertyNames": {
+        "minLength": 2,
+        "maxLength": 63,
+        "pattern": "^[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
+      }
+    },
+    "resources": {
+      "description": "The Resource dependencies needed by the Workload. The resource name must be a valid RFC1123 Label Name of up to 63 characters, including a-z, 0-9, '-' but may not start or end with '-'.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/resource"
+      },
+      "propertyNames": {
+        "minLength": 2,
+        "maxLength": 63,
+        "pattern": "^[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
+      }
+    }
+  },
+  "$defs": {
+    "servicePort": {
+      "description": "The network port description.",
+      "type": "object",
+      "required": [
+        "port"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "port": {
+          "description": "The public service port.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535
+        },
+        "protocol": {
+          "description": "The transport level protocol. Defaults to TCP.",
+          "type": "string",
+          "enum": [
+            "TCP",
+            "UDP"
+          ]
+        },
+        "targetPort": {
+          "description": "The internal service port. This will default to 'port' if not provided.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535
+        }
+      }
+    },
+    "resource": {
+      "description": "The set of Resources associated with this Workload.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "description": "The Resource type. This should be a type supported by the Score implementations being used.",
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 63,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9-]{0,61}[A-Za-z0-9]$"
+        },
+        "class": {
+          "description": "An optional specialisation of the Resource type.",
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 63,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9-]{0,61}[A-Za-z0-9]$"
+        },
+        "id": {
+          "description": "An optional external Resource identifier. When two resources share the same type, class, and id, they are considered the same resource when used across related Workloads. The id must be a valid RFC1123 Label Name of up to 63 characters, including a-z, 0-9, '-' but may not start or end with '-'.",
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 63,
+          "pattern": "^[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
+        },
+        "metadata": {
+          "description": "The metadata for the Resource.",
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "annotations": {
+              "description": "Annotations that apply to the Resource. The annotation can contain A-Z, a-z, 0-9, and '-' and may contain an optional /-separated RFC1123 Host Name prefix.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "propertyNames": {
+                "minLength": 2,
+                "maxLength": 316,
+                "pattern": "^(([a-z0-9][a-z0-9-]{0,61}[a-z0-9])(\\.[a-z0-9][a-z0-9-]{0,61}[a-z0-9])*/)?[A-Za-z0-9][A-Za-z0-9._-]{0,61}[A-Za-z0-9]$"
+              }
+            }
+          }
+        },
+        "params": {
+          "description": "Optional parameters used to provision the Resource in the environment.",
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "resourcesLimits": {
+      "description": "The compute and memory resource limits.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "memory": {
+          "description": "The memory limit in bytes with optional unit specifier. For example 125M or 1Gi.",
+          "type": "string",
+          "pattern": "^[1-9]\\d*(K|M|G|T|Ki|Mi|Gi|Ti)?$"
+        },
+        "cpu": {
+          "description": "The CPU limit as whole or fractional CPUs. 'm' indicates milli-CPUs. For example 2 or 125m.",
+          "type": "string",
+          "pattern": "^\\d*(?:m|\\.\\d+)?$"
+        }
+      }
+    },
+    "container": {
+      "description": "The specification of a Container within the Workload.",
+      "type": "object",
+      "required": [
+        "image"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "image": {
+          "description": "The container image name and tag.",
+          "type": "string",
+          "minLength": 1
+        },
+        "command": {
+          "description": "If specified, overrides the entrypoint defined in the container image.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "args": {
+          "description": "If specified, overrides the arguments passed to the container entrypoint.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "variables": {
+          "description": "The environment variables for the container.",
+          "type": "object",
+          "propertyNames": {
+            "minLength": 1,
+            "pattern": "^[^=]+$"
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "files": {
+          "description": "The extra files to mount into the container.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "target"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "target": {
+                "description": "The file path to expose in the container.",
+                "type": "string",
+                "minLength": 1
+              },
+              "mode": {
+                "description": "The optional file access mode in octal encoding. For example 0600.",
+                "type": "string",
+                "pattern": "^0?[0-7]{3}$"
+              },
+              "source": {
+                "description": "The relative or absolute path to the content file.",
+                "type": "string",
+                "minLength": 1
+              },
+              "content": {
+                "description": "The inline content for the file.",
+                "type": "string"
+              },
+              "noExpand": {
+                "description": "If set to true, the placeholders expansion will not occur in the contents of the file.",
+                "type": "boolean"
+              }
+            },
+            "oneOf": [
+              {
+                "required": [
+                  "target",
+                  "content"
+                ]
+              },
+              {
+                "required": [
+                  "target",
+                  "source"
+                ]
+              }
+            ]
+          }
+        },
+        "volumes": {
+          "description": "The volumes to mount.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source",
+              "target"
+            ],
+            "properties": {
+              "source": {
+                "description": "The external volume reference.",
+                "type": "string"
+              },
+              "path": {
+                "description": "An optional sub path in the volume.",
+                "type": "string"
+              },
+              "target": {
+                "description": "The target mount on the container.",
+                "type": "string"
+              },
+              "readOnly": {
+                "description": "Indicates if the volume should be mounted in a read-only mode.",
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "resources": {
+          "description": "The compute resources for the container.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "limits": {
+              "description": "The maximum allowed resources for the container.",
+              "$ref": "#/$defs/resourcesLimits"
+            },
+            "requests": {
+              "description": "The minimal resources required for the container.",
+              "$ref": "#/$defs/resourcesLimits"
+            }
+          }
+        },
+        "livenessProbe": {
+          "description": "The liveness probe for the container.",
+          "$ref": "#/$defs/containerProbe"
+        },
+        "readinessProbe": {
+          "description": "The readiness probe for the container.",
+          "$ref": "#/$defs/containerProbe"
+        }
+      }
+    },
+    "containerProbe": {
+      "type": "object",
+      "required": [
+        "httpGet"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "httpGet": {
+          "$ref": "#/$defs/httpProbe"
+        }
+      }
+    },
+    "httpProbe": {
+      "description": "An HTTP probe details.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "port",
+        "path"
+      ],
+      "properties": {
+        "host": {
+          "description": "Host name to connect to. Defaults to the workload IP. The is equivalent to a Host HTTP header.",
+          "type": "string",
+          "minLength": 1
+        },
+        "scheme": {
+          "description": "Scheme to use for connecting to the host (HTTP or HTTPS). Defaults to HTTP.",
+          "type": "string",
+          "enum": [
+            "HTTP",
+            "HTTPS"
+          ]
+        },
+        "path": {
+          "description": "The path to access on the HTTP server.",
+          "type": "string"
+        },
+        "port": {
+          "description": "The port to access on the workload.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535
+        },
+        "httpHeaders": {
+          "description": "Additional HTTP headers to send with the request",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "value"
+            ],
+            "properties": {
+              "name": {
+                "description": "The HTTP header name.",
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]+$"
+              },
+              "value": {
+                "description": "The HTTP header value.",
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

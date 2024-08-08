@@ -1,5 +1,8 @@
 ![Score banner](/docs/images/banner.png)
 
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+
 ## ![Score](/docs/images/logo.svg) The Score Specification
 
 Score is an open-source workload specification designed to simplify development for cloud-native developers. The specification enables you to describe your workload's configuration in a vendor-neutral way, eliminating the need for tooling-specific syntax from platforms such as Docker Compose or Kubernetes. By leveraging familiar concepts and semantics, defining a workload’s configuration becomes as simple as stating, “I want a database of type X and an event queue of type Y to accompany my workload”.
@@ -56,7 +59,7 @@ Looking at the example above, you'll notice that the Score specification is:
 
 * **declarative**: With Score, developers declare what their workload requires to run as part of the Score specification. The platform in the target environment is responsible for resolving individual runtime requirements. This establishes a contract between dev and ops: If the requirements listed in the spec are honoured, the workload will run as intended.
 
-The current version of the specification schema is stored [here](https://github.com/score-spec/schema/blob/main/score-v1b1.json). For a more detailed specification reference, check out our [developer documentation](https://docs.score.dev/docs/score-specification/score-spec-reference/).
+The current version of the specification schema is stored [here](./score-v1b1.json). For a more detailed specification reference, check out our [developer documentation](https://docs.score.dev/docs/score-specification/score-spec-reference/).
 
 ## ![Score](/docs/images/logo.svg) Implementation of the Score Specification
 
@@ -112,11 +115,3 @@ See [Roadmap](roadmap.md). You can [submit an idea](https://github.com/score-spe
 ### Contribution Guidelines and Governance
 
 Our general contributor guidelines can be found in [CONTRIBUTING.md](CONTRIBUTING.md). Please note that some repositories may have additional guidelines. For more information on our governance model, please refer to [GOVERNANCE.md](GOVERNANCE.md).
-
-### License
-
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
-### Code of conduct
-
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
