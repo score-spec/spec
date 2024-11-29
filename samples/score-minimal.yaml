@@ -1,0 +1,3 @@
+apiVersion: score.dev/v1b1
+metadata:
+  name: example-workload-name123

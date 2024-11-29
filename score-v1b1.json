@@ -6,10 +6,16 @@
   "type": "object",
   "required": [
     "apiVersion",
-    "metadata",
-    "containers"
+    "metadata"
   ],
   "additionalProperties": false,
+  "patternProperties": {
+    "^x-.+": {
+      "description": "A top-level Score extention. This is a schema extension which is not defined by the common Score specification but may be supported by a subset of Score implementations. The 'x-' prefix avoid conflict with future top level fields in the Score specification.",
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
   "properties": {
     "apiVersion": {
       "description": "The declared Score Specification version.",
@@ -67,7 +73,7 @@
     "containers": {
       "description": "The set of named containers in the Workload. The container name must be a valid RFC1123 Label Name of up to 63 characters, including a-z, 0-9, '-' but may not start or end with '-'.",
       "type": "object",
-      "minProperties": 0,
+      "minProperties": 1,
       "additionalProperties": {
         "$ref": "#/$defs/container"
       },

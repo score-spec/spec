@@ -1,0 +1,10 @@
+apiVersion: score.dev/v1b1
+metadata:
+  name: example-workload-name123
+x-my-extension:
+  archive: http://example.com/binary.tgz
+  variables:
+    SOME_VAR: ${resources.example.thing}
+resources:
+  example:
+    type: resource-type
