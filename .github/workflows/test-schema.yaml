@@ -17,3 +17,5 @@ jobs:
         with:
           go-version: 'stable'
       - run: make test
+        env:
+          GOPATH: /home/runner/work/spec/go
