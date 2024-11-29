@@ -70,6 +70,6 @@ resources:
         data: here
   resource-two2:
     type: Resource-Two
-  resource.three:
+  resource-three:
     type: Type-Three
     id: shared-type-three

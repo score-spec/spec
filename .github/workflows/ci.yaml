@@ -2,7 +2,9 @@
 name: "CI"
 
 on:
-  pull_request:
+  push:
+    branches: main
+  pull_request: {}
 
 jobs:
   linkchecker:
@@ -19,10 +21,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
+  jsonschema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: "1.22"
+          go-version: 'stable'
 
       - name: Check Schema
         env:
