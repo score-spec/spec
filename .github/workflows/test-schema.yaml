@@ -1,0 +1,16 @@
+name: Test JSON schema
+on:
+  push:
+    branches: main
+  pull_request:
+    paths:
+    - 'samples/**'
+    - 'Makefile'
+    - 'score-*.json'
+    - '.github/workflows/**'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: make test
