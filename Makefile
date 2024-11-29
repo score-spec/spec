@@ -39,7 +39,7 @@ test-examples: ${GOPATH}/bin/jv
 ifeq ($(SCORE_EXAMPLES_DIR),)
 	$(error SCORE_EXAMPLES_DIR must be set)
 endif
-	find ${SCORE_EXAMPLES_DIR} -name 'score*.yaml' -print -exec ${GOPATH}/bin/jv --assert-format --assert-content ./score-v1b1.json {} \;
+	for f in $$(find ${SCORE_EXAMPLES_DIR} -name 'score*.yaml' -print); do ${GOPATH}/bin/jv --assert-format --assert-content ./score-v1b1.json $$f; done
 	@echo "Schema matches all samples"
 
 ## Run all tests
