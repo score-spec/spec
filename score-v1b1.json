@@ -338,10 +338,7 @@
     },
     "containerProbe": {
       "type": "object",
-      "oneOf": [
-        {"required": ["httpGet"]},
-        {"required": ["exec"]}
-      ],
+      "description": "The probe may be defined as either http, command execution, or both when the deployment runtime supports one and not the other.",
       "additionalProperties": false,
       "properties": {
         "httpGet": {
