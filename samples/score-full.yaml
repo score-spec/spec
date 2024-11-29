@@ -42,9 +42,11 @@ containers:
     - source: volume-two
       target: /mnt/something-else
     livenessProbe:
-      httpGet:
-        port: 8080
-        path: /livez
+      exec:
+        command:
+        - /bin/bash
+        - -c
+        - "true"
     readinessProbe:
       httpGet:
         host: 127.0.0.1

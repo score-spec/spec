@@ -338,13 +338,32 @@
     },
     "containerProbe": {
       "type": "object",
-      "required": [
-        "httpGet"
+      "oneOf": [
+        {"required": ["httpGet"]},
+        {"required": ["exec"]}
       ],
       "additionalProperties": false,
       "properties": {
         "httpGet": {
           "$ref": "#/$defs/httpProbe"
+        },
+        "exec": {
+          "$ref": "#/$defs/execProbe"
+        }
+      }
+    },
+    "execProbe": {
+      "description": "An executable health probe.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command"],
+      "properties": {
+        "command": {
+          "description": "The command and arguments to execute within the container.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
