@@ -1,7 +1,8 @@
-![Score banner](/docs/images/banner.png)
-
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![good first issues](https://img.shields.io/github/issues-search/score-spec/spec?query=type%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22&label=good%20first%20issues&style=flat&logo=github)](https://github.com/score-spec/spec/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
+![Score banner](/docs/images/banner.png)
 
 ## ![Score](/docs/images/logo.svg) The Score Specification
 
