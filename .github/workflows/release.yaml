@@ -2,6 +2,8 @@ name: Release
 on:
   release:
     types: [published]
+permissions:
+  contents: write
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -9,8 +11,6 @@ jobs:
     - uses: actions/checkout@v4
     - name: Release
       uses: softprops/action-gh-release@v2
-      permissions:
-        contents: write
       with:
         files: |
           score-v1b1.json
