@@ -45,6 +45,11 @@ containers:
       httpGet:
         port: 8080
         path: /livez
+      exec:
+        command:
+        - /bin/curl
+        - -f
+        - "http://localhost:8080/livez"
     readinessProbe:
       httpGet:
         host: 127.0.0.1

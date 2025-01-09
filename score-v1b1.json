@@ -338,13 +338,29 @@
     },
     "containerProbe": {
       "type": "object",
-      "required": [
-        "httpGet"
-      ],
+      "description": "The probe may be defined as either http, command execution, or both. The execProbe should be preferred if the Score implementation supports both types.",
       "additionalProperties": false,
       "properties": {
         "httpGet": {
           "$ref": "#/$defs/httpProbe"
+        },
+        "exec": {
+          "$ref": "#/$defs/execProbe"
+        }
+      }
+    },
+    "execProbe": {
+      "description": "An executable health probe.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command"],
+      "properties": {
+        "command": {
+          "description": "The command and arguments to execute within the container.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
