@@ -235,6 +235,7 @@
           "description": "The extra files to mount into the container.",
           "type": "array",
           "items": {
+            "description": "The details of a file to mount in the container. One of 'source', 'content', or 'binaryContent' must be provided.",
             "type": "object",
             "required": [
               "target"
@@ -257,7 +258,11 @@
                 "minLength": 1
               },
               "content": {
-                "description": "The inline content for the file.",
+                "description": "The inline content for the file. Only supports valid utf-8.",
+                "type": "string"
+              },
+              "binaryContent": {
+                "description": "Inline standard-base64 encoded content for the file. Does not support placeholder expansion.",
                 "type": "string"
               },
               "noExpand": {
@@ -270,6 +275,12 @@
                 "required": [
                   "target",
                   "content"
+                ]
+              },
+              {
+                "required": [
+                  "target",
+                  "binaryContent"
                 ]
               },
               {

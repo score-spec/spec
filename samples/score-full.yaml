@@ -34,6 +34,8 @@ containers:
       content: |
         some multiline
         content
+    - target: /my/other/binaryfile
+      binaryContent: ADBgwpA=
     volumes:
     - source: volume-name
       target: /mnt/something
