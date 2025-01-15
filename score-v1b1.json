@@ -193,6 +193,84 @@
         }
       }
     },
+    "containerFile": {
+      "description": "The details of a file to mount in the container. One of 'source', 'content', or 'binaryContent' must be provided.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "description": "(Deprecated) The file path to expose in the container. This is only used in Score workloads that describe files as an array.",
+          "deprecated": true,
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "description": "The optional file access mode in octal encoding. For example 0600.",
+          "type": "string",
+          "pattern": "^0?[0-7]{3}$"
+        },
+        "source": {
+          "description": "The relative or absolute path to the content file.",
+          "type": "string",
+          "minLength": 1
+        },
+        "content": {
+          "description": "The inline content for the file. Only supports valid utf-8.",
+          "type": "string"
+        },
+        "binaryContent": {
+          "description": "Inline standard-base64 encoded content for the file. Does not support placeholder expansion.",
+          "type": "string"
+        },
+        "noExpand": {
+          "description": "If set to true, the placeholders expansion will not occur in the contents of the file.",
+          "type": "boolean"
+        }
+      },
+      "oneOf": [
+        {
+          "required": [
+            "content"
+          ]
+        },
+        {
+          "required": [
+            "binaryContent"
+          ]
+        },
+        {
+          "required": [
+            "source"
+          ]
+        }
+      ]
+    },
+    "containerVolume": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source"
+      ],
+      "properties": {
+        "source": {
+          "description": "The external volume reference.",
+          "type": "string"
+        },
+        "path": {
+          "description": "An optional sub path in the volume.",
+          "type": "string"
+        },
+        "target": {
+          "description": "(Deprecated) The target mount on the container. This is only used in Score workloads that describe volumes as an array.",
+          "deprecated": true,
+          "type": "string"
+        },
+        "readOnly": {
+          "description": "Indicates if the volume should be mounted in a read-only mode.",
+          "type": "boolean"
+        }
+      }
+    },
     "container": {
       "description": "The specification of a Container within the Workload.",
       "type": "object",
@@ -232,95 +310,40 @@
           }
         },
         "files": {
-          "description": "The extra files to mount into the container.",
-          "type": "array",
-          "items": {
-            "description": "The details of a file to mount in the container. One of 'source', 'content', or 'binaryContent' must be provided.",
-            "type": "object",
-            "required": [
-              "target"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "target": {
-                "description": "The file path to expose in the container.",
-                "type": "string",
-                "minLength": 1
-              },
-              "mode": {
-                "description": "The optional file access mode in octal encoding. For example 0600.",
-                "type": "string",
-                "pattern": "^0?[0-7]{3}$"
-              },
-              "source": {
-                "description": "The relative or absolute path to the content file.",
-                "type": "string",
-                "minLength": 1
-              },
-              "content": {
-                "description": "The inline content for the file. Only supports valid utf-8.",
-                "type": "string"
-              },
-              "binaryContent": {
-                "description": "Inline standard-base64 encoded content for the file. Does not support placeholder expansion.",
-                "type": "string"
-              },
-              "noExpand": {
-                "description": "If set to true, the placeholders expansion will not occur in the contents of the file.",
-                "type": "boolean"
+          "description": "The extra files to mount into the container. Described as a map of target paths to file details. The array form is deprecated.", 
+          "oneOf": [
+            {
+              "type": "array",
+              "deprecated": true,
+              "items": {
+                "$ref": "#/$defs/containerFile"
               }
             },
-            "oneOf": [
-              {
-                "required": [
-                  "target",
-                  "content"
-                ]
-              },
-              {
-                "required": [
-                  "target",
-                  "binaryContent"
-                ]
-              },
-              {
-                "required": [
-                  "target",
-                  "source"
-                ]
-              }
-            ]
-          }
-        },
-        "volumes": {
-          "description": "The volumes to mount.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "source",
-              "target"
-            ],
-            "properties": {
-              "source": {
-                "description": "The external volume reference.",
-                "type": "string"
-              },
-              "path": {
-                "description": "An optional sub path in the volume.",
-                "type": "string"
-              },
-              "target": {
-                "description": "The target mount on the container.",
-                "type": "string"
-              },
-              "readOnly": {
-                "description": "Indicates if the volume should be mounted in a read-only mode.",
-                "type": "boolean"
+            {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/containerFile"
               }
             }
-          }
+          ]
+        },
+        "volumes": {
+          "description": "The volumes to mount. Described as a map of target paths to volume details. The array form is deprecated.",
+          "oneOf": [
+            {
+              "type": "array",
+              "deprecated": true,
+              "items": {
+                "$ref": "#/$defs/containerVolume"
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/containerVolume"
+              }
+            }
+          ]
         },
         "resources": {
           "description": "The compute resources for the container.",
