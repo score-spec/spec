@@ -322,7 +322,18 @@
             {
               "type": "object",
               "additionalProperties": {
-                "$ref": "#/$defs/containerFile"
+                "allOf": [
+                  {
+                    "not": {
+                      "type": "object",
+                      "additionalProperties": true,
+                      "required": ["target"]
+                    }
+                  },
+                  {
+                    "$ref": "#/$defs/containerFile"
+                  }
+                ]
               }
             }
           ]
@@ -340,7 +351,18 @@
             {
               "type": "object",
               "additionalProperties": {
-                "$ref": "#/$defs/containerVolume"
+                "allOf": [
+                  {
+                    "not": {
+                      "type": "object",
+                      "additionalProperties": true,
+                      "required": ["target"]
+                    }
+                  },
+                  {
+                    "$ref": "#/$defs/containerVolume"
+                  }
+                ]
               }
             }
           ]
