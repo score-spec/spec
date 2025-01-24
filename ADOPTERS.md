@@ -10,8 +10,8 @@ The list of organizations that have publicly shared the usage of Score:
 
 | Organization                       | Success Story |
 |:------------------------------------|---------------|
-| [Humanitec](https://humanitec.com)  | Use the Score `spec` to define all the containerized workloads and their dependencies of the SaaS product. [`score-compose`](https://docs.score.dev/docs/score-implementation/score-compose/) is used to run integration tests locally and in the CI pipelines with Docker Compose. Score files are deployed via the [Humanitec's Score implementation (`humctl`)](https://humanitec.com/products/score). |
 | [Bechtle](https://www.bechtle.com/) | Internal and external Developers use the Score `spec` to define the containerized workloads and their dependencies, and deploy them via the [Humanitec's Score implementation (`humctl`)](https://humanitec.com/products/score). |
+| [Humanitec](https://humanitec.com)  | Use the Score `spec` to define all the containerized workloads and their dependencies of the SaaS product. [`score-compose`](https://docs.score.dev/docs/score-implementation/score-compose/) is used to run integration tests locally and in the CI pipelines with Docker Compose. Score files are deployed via the [Humanitec's Score implementation (`humctl`)](https://humanitec.com/products/score). |
 <!-- append the line below to the table
 | [name](URL) | brief description of how you are using Score |
 -->
