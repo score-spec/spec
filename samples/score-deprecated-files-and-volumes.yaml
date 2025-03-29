@@ -1,0 +1,16 @@
+# The following workload describes a container which has a file and volume mounted. The file mount is using the deprecated format of an array of files.
+# This was deprecated since files do not infer order and the "target" path can be considered both required and unique. Simalarly, the volume mount is also
+# using a deprecated array format.
+# ==========================================================================================================================================
+apiVersion: score.dev/v1b1
+metadata:
+  name: "deprecated-files-example"
+containers:
+  main:
+    image: "example-image:latest"
+    files:
+    - target: /mnt/some-path
+      content: "my content here"
+    volumes:
+    - target: /mnt/vol
+      source: some-volume
