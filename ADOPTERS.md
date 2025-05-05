@@ -10,6 +10,7 @@ The list of organizations that have publicly shared the usage of Score:
 
 | Organization                        | Success Story |
 |:------------------------------------|---------------|
+| [BambooHR](https://www.bamboohr.com/) | Abstract the growing infrastructure while keeping software engineers focused on their strengths with the Score `spec` and the [Humanitec's Score implementation (`humctl`)](https://humanitec.com/products/score). |
 | [Bechtle](https://www.bechtle.com/) | Empower both internal and external Developers to use the Score `spec` to define the containerized workloads and their dependencies, and deploy them to Bechtle's IDP via the [Humanitec's Score implementation (`humctl`)](https://humanitec.com/products/score). |
 | [Cimpress](https://cimpress.com/)   | Provide developers with a code-based, self-service interface to define dependencies for their workloads with the Score `spec`. Simplify the interactions with infrastructure by abstracting the underlying tooling and complexity, reducing cognitive load with the [Humanitec's Score implementation (`humctl`)](https://humanitec.com/products/score). |
 | [Convera](https://convera.com/)     | Enable Developers to choose their preferred level of abstractions for optimal developer self-service and productivity by using the Score `spec` for all their microservices, and deploy them via the [Humanitec's Score implementation (`humctl`)](https://humanitec.com/products/score). |
