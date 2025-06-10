@@ -27,22 +27,22 @@ containers:
     variables:
       SOME_VAR: some content here
     files:
-    - target: /my/file
-      mode: "0600"
-      source: file.txt
-    - target: /my/other/file
-      content: |
-        some multiline
-        content
-    - target: /my/other/binaryfile
-      binaryContent: ADBgwpA=
+      /my/file:
+        mode: "0600"
+        source: file.txt
+      /my/other/file:
+        content: |
+          some multiline
+          content
+      /my/other/binaryfile:
+        binaryContent: ADBgwpA=
     volumes:
-    - source: volume-name
-      target: /mnt/something
-      path: /sub/path
-      readOnly: false
-    - source: volume-two
-      target: /mnt/something-else
+      /mnt/something:
+        source: volume-name
+        path: /sub/path
+        readOnly: false
+      /mnt/something-else:
+        source: volume-two
     livenessProbe:
       httpGet:
         port: 8080
