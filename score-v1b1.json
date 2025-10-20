@@ -367,6 +367,38 @@
             }
           ]
         },
+        "before": {
+          "description": "A list of containers which should run before a main process.",
+          "type": "array",
+          "additionalProperties": false,
+          "required": ["containers", "ready"],
+          "items": {
+            "type": "object",
+            "properties": {
+              "containers": {
+                "description": "The list of containers to run before the main process.",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "description": "A container ID in this implementation.",
+                  "minLength": 2,
+                  "maxLength": 63,
+                  "pattern": "^[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
+                }
+              },
+              "ready": {
+                "description": "The status of the container before the next container are started.",
+                "title": "Ready",
+                "type": "string",
+                "enum": [
+                  "started",
+                  "healthy",
+                  "complete"
+                ]
+              }
+            }
+          }
+        },
         "resources": {
           "description": "The compute resources for the container.",
           "type": "object",
