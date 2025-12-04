@@ -99,7 +99,7 @@ We host regular community meetings to discuss updates, share ideas, and collabor
 
 | Community call | Info |
 |:-----------|:------------|
-| Meeting Link | Join via [Zoom]([https://meet.google.com/znt-usdc-hzs](https://zoom-lfx.platform.linuxfoundation.org/meeting/98284206225?password=a09e77df-8c63-44ca-8a48-12de22fdffe4)) or view the [Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/score?view=month) |
+| Meeting Link | Join via [Zoom](https://zoom-lfx.platform.linuxfoundation.org/meeting/98284206225?password=a09e77df-8c63-44ca-8a48-12de22fdffe4) or view the [Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/score?view=month) |
 | Meeting Agenda & Notes | Add to our agenda or review minutes [here](https://github.com/score-spec/spec/discussions/categories/community-meetings) |
 | Meeting Time | 2:00-3:00pm GMT / 3:00-4:00 CEST, every first Thursday of the month unless specified |
 
