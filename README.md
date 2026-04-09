@@ -99,9 +99,9 @@ We host regular community meetings to discuss updates, share ideas, and collabor
 
 | Community call | Info |
 |:-----------|:------------|
-| Meeting Link | Join via [Google Meet](https://meet.google.com/znt-usdc-hzs) or call +49 40 8081618260 (Pin: 599 887 196)
-| Meeting Agenda & Notes | Add to our agenda or review minutes [here](https://github.com/score-spec/spec/discussions/categories/community-meetings)
-| Meeting Time | 1:00-2:00pm UTC, every first Thursday of the month
+| Meeting Link | Join via [Zoom](https://zoom-lfx.platform.linuxfoundation.org/meeting/98284206225?password=a09e77df-8c63-44ca-8a48-12de22fdffe4) or view the [Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/score?view=month) |
+| Meeting Agenda & Notes | Add to our agenda or review minutes [here](https://github.com/score-spec/spec/discussions/categories/community-meetings) |
+| Meeting Time | 3:00-4:00 CET/CEST, every first Thursday of the month unless specified |
 
 If you can't attend at the scheduled time but would like to discuss something, please reach out. We’re happy to arrange an ad-hoc meeting that fits your schedule.
 
