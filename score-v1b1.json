@@ -189,7 +189,7 @@
         "cpu": {
           "description": "The CPU limit as whole or fractional CPUs. 'm' indicates milli-CPUs. For example 2 or 125m.",
           "type": "string",
-          "pattern": "^\\d*(?:m|\\.\\d+)?$"
+          "pattern": "^\\d+(?:m|\\.\\d+)?$"
         }
       }
     },
