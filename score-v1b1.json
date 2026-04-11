@@ -429,7 +429,11 @@
         "exec": {
           "$ref": "#/$defs/execProbe"
         }
-      }
+      },
+      "anyOf": [
+        {"required": ["httpGet"]},
+        {"required": ["exec"]}
+      ]
     },
     "execProbe": {
       "description": "An executable health probe.",
