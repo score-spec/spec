@@ -368,26 +368,20 @@
           ]
         },
         "before": {
-          "description": "A list of containers which should run before a main process.",
-          "type": "array",
-          "additionalProperties": false,
-          "required": ["containers", "ready"],
-          "items": {
+          "description": "Containers which should be started before this container.",
+          "type": "object",
+          "propertyNames": {
+            "minLength": 2,
+            "maxLength": 63,
+            "pattern": "^[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
+          },
+          "additionalProperties": {
             "type": "object",
+            "required": ["ready"],
+            "additionalProperties": false,
             "properties": {
-              "containers": {
-                "description": "The list of containers to run before the main process.",
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "description": "A container ID in this implementation.",
-                  "minLength": 2,
-                  "maxLength": 63,
-                  "pattern": "^[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
-                }
-              },
               "ready": {
-                "description": "The status of the container before the next container are started.",
+                "description": "The status of the container before the next container is started.",
                 "title": "Ready",
                 "type": "string",
                 "enum": [
