@@ -2,9 +2,9 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 [![good first issues](https://img.shields.io/github/issues-search/score-spec/spec?query=type%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22&label=good%20first%20issues&style=flat&logo=github)](https://github.com/score-spec/spec/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
-![Score banner](/docs/images/banner.png)
+![Score banner](docs/images/banner.png)
 
-## ![Score](/docs/images/logo.svg) The Score Specification
+## ![Score](docs/images/logo.svg) The Score Specification
 
 Score is an open-source workload specification designed to simplify development for cloud-native developers. The specification enables you to describe your workload's configuration in a vendor-neutral way, eliminating the need for tooling-specific syntax from platforms such as Docker Compose or Kubernetes. By leveraging familiar concepts and semantics, defining a workload’s configuration becomes as simple as stating, “I want a database of type X and an event queue of type Y to accompany my workload”.
 
@@ -62,11 +62,11 @@ Looking at the example above, you'll notice that the Score specification is:
 
 The current version of the specification schema is stored [here](./score-v1b1.json). For a more detailed specification reference, check out our [developer documentation](https://docs.score.dev/docs/score-specification/score-spec-reference/).
 
-## ![Score](/docs/images/logo.svg) Implementation of the Score Specification
+## ![Score](docs/images/logo.svg) Implementation of the Score Specification
 
 Once you define your workload's runtime requirements with the Score specification, a Score Implementation translates it into the desired target output format as illustrated in the graphic below.
 
-![how-score-works](/docs/images/how-score-works.png)
+![how-score-works](docs/images/how-score-works.png)
 
 Currently, we offer two reference implementations:
 
@@ -77,7 +77,7 @@ These implementations are suitable for practical use and serve as blueprints for
 
 Community-built implementations are typically hosted and maintained by their creators. These can be referenced in our documentation or kept private. If a contributor wishes to donate their implementation to our project, we are open to exploring that option.
 
-## ![Score](/docs/images/logo.svg) Benefits of Score
+## ![Score](docs/images/logo.svg) Benefits of Score
 
 Score aims to reduce developer toil and cognitive load by only having to define a single specification file that works across multiple platforms. Cloud native developers often struggle with configuration inconsistencies between environments. This gets even more complicated when the technology stack in each environment is different. For example: What if you use Docker Compose for local development, but deploy to a Kubernetes-based development environment? Not only do you have to figure out Docker Compose and Kubernetes, but you need to keep them in sync. This results in various bottlenecks along the application delivery lifecycle:
 
@@ -91,7 +91,7 @@ Score provides a single, easy to understand specification for each workload that
 
 By reducing the risk of incorrect or inconsistent configurations across environments, Score helps developers focus on their core tasks and enhances their day-to-day work experience.
 
-## ![Get in touch](/docs/images/get-involved.svg) Get in touch
+## ![Get in touch](docs/images/get-involved.svg) Get in touch
 
 Connect with us through the [Score](https://cloud-native.slack.com/archives/C07DN0D1UCW) channel in the CNCF Slack (<https://slack.cncf.io/>) or contact us via email at team@score.dev.
 
