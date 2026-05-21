@@ -322,16 +322,23 @@
             {
               "type": "object",
               "additionalProperties": {
-                "allOf": [
+                "oneOf": [
                   {
-                    "not": {
-                      "type": "object",
-                      "additionalProperties": true,
-                      "required": ["target"]
-                    }
+                    "allOf": [
+                      {
+                        "not": {
+                          "type": "object",
+                          "additionalProperties": true,
+                          "required": ["target"]
+                        }
+                      },
+                      {
+                        "$ref": "#/$defs/containerFile"
+                      }
+                    ]
                   },
                   {
-                    "$ref": "#/$defs/containerFile"
+                    "type": "string"
                   }
                 ]
               }
@@ -351,16 +358,23 @@
             {
               "type": "object",
               "additionalProperties": {
-                "allOf": [
+                "oneOf": [
                   {
-                    "not": {
-                      "type": "object",
-                      "additionalProperties": true,
-                      "required": ["target"]
-                    }
+                    "allOf": [
+                      {
+                        "not": {
+                          "type": "object",
+                          "additionalProperties": true,
+                          "required": ["target"]
+                        }
+                      },
+                      {
+                        "$ref": "#/$defs/containerVolume"
+                      }
+                    ]
                   },
                   {
-                    "$ref": "#/$defs/containerVolume"
+                    "type": "string"
                   }
                 ]
               }

@@ -36,6 +36,7 @@ containers:
           content
       /my/other/binaryfile:
         binaryContent: ADBgwpA=
+      /my/other/file-short: "some content here"
     volumes:
       /mnt/something:
         source: volume-name
@@ -43,6 +44,7 @@ containers:
         readOnly: false
       /mnt/something-else:
         source: volume-two
+      /mnt/something-short: "volume-short"
     livenessProbe:
       httpGet:
         port: 8080
