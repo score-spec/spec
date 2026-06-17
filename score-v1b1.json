@@ -182,9 +182,9 @@
       "additionalProperties": false,
       "properties": {
         "memory": {
-          "description": "The memory limit in bytes with optional unit specifier. For example 125M or 1Gi.",
+          "description": "The memory limit in bytes with optional unit specifier. For example 125M or 1.5Gi.",
           "type": "string",
-          "pattern": "^[1-9]\\d*(K|M|G|T|Ki|Mi|Gi|Ti)?$"
+          "pattern": "^(0\\.\\d+|[1-9]\\d*(\\.\\d+)?)(K|M|G|T|P|E|Ki|Mi|Gi|Ti|Pi|Ei)?$"
         },
         "cpu": {
           "description": "The CPU limit as whole or fractional CPUs. 'm' indicates milli-CPUs. For example 2 or 125m.",
