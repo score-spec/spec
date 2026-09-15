@@ -287,6 +287,7 @@
         "command": {
           "description": "If specified, overrides the entrypoint defined in the container image.",
           "type": "array",
+          "minItems": 1,
           "items": {
             "type": "string"
           }
@@ -294,6 +295,7 @@
         "args": {
           "description": "If specified, overrides the arguments passed to the container entrypoint.",
           "type": "array",
+          "minItems": 1,
           "items": {
             "type": "string"
           }
@@ -444,6 +446,7 @@
         "command": {
           "description": "The command and arguments to execute within the container.",
           "type": "array",
+          "minItems": 1,
           "items": {
             "type": "string"
           }
